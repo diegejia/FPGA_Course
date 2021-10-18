@@ -1,0 +1,88 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\intelFPGA_lite\17.1\project\pll_test\simulation\modelsim
+T_opt
+VOe4441SN3]K:=oNk1HDCe0
+04 11 4 work pll_test_tb fast 0
+=1-6018952d3ac1-615850fb-154-28b0
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.1c;51
+vpll
+IeL4oL1_YCC`BbZWO_O94>0
+V4mBg2NY6zIz8b[@60kZR01
+Z1 dC:\intelFPGA_lite\17.1\project\pll_test\simulation\modelsim
+w1632989127
+8C:/intelFPGA_lite/17.1/project/pll_test/pcore/pll.v
+FC:/intelFPGA_lite/17.1/project/pll_test/pcore/pll.v
+L0 39
+Z2 OL;L;10.1c;51
+r1
+31
+Z3 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 VQSaah3E]@?l7TZ;NR<EU1
+!s85 0
+!s108 1633177850.955000
+!s107 C:/intelFPGA_lite/17.1/project/pll_test/pcore/pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.1/project/pll_test/pcore|C:/intelFPGA_lite/17.1/project/pll_test/pcore/pll.v|
+!s92 -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.1/project/pll_test/pcore -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vpll_altpll
+IgEbc9FHf7Amk5[QlDR]Zc2
+V?DF8j=RJ_EcKZlDzF;fMW0
+R1
+w1632989807
+8C:/intelFPGA_lite/17.1/project/pll_test/db/pll_altpll.v
+FC:/intelFPGA_lite/17.1/project/pll_test/db/pll_altpll.v
+L0 30
+R2
+r1
+31
+R3
+!i10b 1
+!s100 k[Kj^lD>33KZ<]2Z2f?DC1
+!s85 0
+!s108 1633177851.017000
+!s107 C:/intelFPGA_lite/17.1/project/pll_test/db/pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.1/project/pll_test/db|C:/intelFPGA_lite/17.1/project/pll_test/db/pll_altpll.v|
+!s92 -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.1/project/pll_test/db -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vpll_test
+IgI76Hj8TZK3S:D4SdPSXW0
+VSWbWFDT8HSnSbGIzNc<E=3
+R1
+w1632992403
+8C:/intelFPGA_lite/17.1/project/pll_test/pll_test.v
+FC:/intelFPGA_lite/17.1/project/pll_test/pll_test.v
+L0 1
+R2
+r1
+31
+R3
+Z4 !s92 -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.1/project/pll_test -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 4X:3Kz^fR1mZ=8?T@5;dl1
+!s85 0
+!s108 1633177850.901000
+!s107 C:/intelFPGA_lite/17.1/project/pll_test/pll_test.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.1/project/pll_test|C:/intelFPGA_lite/17.1/project/pll_test/pll_test.v|
+vpll_test_tb
+I`P>;0E]a5LF:QTRlYWn7;3
+VYmC5hE8Jae@Z>25e_@7IY1
+R1
+w1632992353
+8C:/intelFPGA_lite/17.1/project/pll_test/pll_test_tb.v
+FC:/intelFPGA_lite/17.1/project/pll_test/pll_test_tb.v
+L0 2
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 lF9J=CE]e99Z1TN;G=Tbh3
+!s85 0
+!s108 1633177851.065000
+!s107 C:/intelFPGA_lite/17.1/project/pll_test/pll_test_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.1/project/pll_test|C:/intelFPGA_lite/17.1/project/pll_test/pll_test_tb.v|

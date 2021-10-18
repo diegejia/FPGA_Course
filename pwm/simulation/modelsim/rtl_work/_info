@@ -1,0 +1,50 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\intelFPGA_lite\17.1\project\pwm\simulation\modelsim
+T_opt
+VTlHXi9e`25Zc0Lbf`GaE@0
+04 6 4 work pwm_tb fast 0
+=1-6018952d3ac1-615eb508-24f-f18
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.1c;51
+vpwm
+Ia1X0?:37>5_emj^li=@fX2
+VLzQILbRb_TG6M17XFmN:a2
+Z1 dC:\intelFPGA_lite\17.1\project\pwm\simulation\modelsim
+w1633434095
+8C:/intelFPGA_lite/17.1/project/pwm/pwm.v
+FC:/intelFPGA_lite/17.1/project/pwm/pwm.v
+L0 1
+Z2 OL;L;10.1c;51
+r1
+31
+Z3 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z4 !s92 -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.1/project/pwm -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 Go@IJB2lIo:g`85gG@:X:2
+!s85 0
+!s108 1633596680.367000
+!s107 C:/intelFPGA_lite/17.1/project/pwm/pwm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.1/project/pwm|C:/intelFPGA_lite/17.1/project/pwm/pwm.v|
+vpwm_tb
+IVi4HUf7=U=ZkMe_S6G8>W1
+VeYif57h?UM=5iMT:Za:c<2
+R1
+w1633596658
+8C:/intelFPGA_lite/17.1/project/pwm/pwm_tb.v
+FC:/intelFPGA_lite/17.1/project/pwm/pwm_tb.v
+L0 2
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 =e_hERkUN=O]^l1Q^b3^N2
+!s85 0
+!s108 1633596680.417000
+!s107 C:/intelFPGA_lite/17.1/project/pwm/pwm_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.1/project/pwm|C:/intelFPGA_lite/17.1/project/pwm/pwm_tb.v|

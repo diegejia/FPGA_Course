@@ -1,0 +1,1165 @@
+TimeQuest Timing Analyzer report for music
+Fri Oct 15 16:53:30 2021
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'clk'
+ 13. Slow 1200mV 85C Model Hold: 'clk'
+ 14. Slow 1200mV 85C Model Metastability Summary
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1200mV 0C Model Setup: 'clk'
+ 22. Slow 1200mV 0C Model Hold: 'clk'
+ 23. Slow 1200mV 0C Model Metastability Summary
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Fast 1200mV 0C Model Setup: 'clk'
+ 30. Fast 1200mV 0C Model Hold: 'clk'
+ 31. Fast 1200mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 38. Setup Transfers
+ 39. Hold Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths Summary
+ 43. Clock Status Summary
+ 44. Unconstrained Input Ports
+ 45. Unconstrained Output Ports
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; music                                               ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE6F17C8                                         ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.08        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   4.5%      ;
+;     Processor 3            ;   1.7%      ;
+;     Processors 4-6         ;   0.8%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 104.29 MHz ; 104.29 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; clk   ; -8.589 ; -480.848           ;
++-------+--------+--------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.434 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; clk   ; -3.201 ; -231.396                         ;
++-------+--------+----------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                                                                              ;
++--------+-------------------------------------------------------------------------------------+------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                           ; To Node    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------------------------------------------------+------------+--------------+-------------+--------------+------------+------------+
+; -8.589 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[14] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.620      ;
+; -8.589 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[10] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.620      ;
+; -8.589 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[11] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.620      ;
+; -8.589 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[18] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.620      ;
+; -8.589 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[12] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.620      ;
+; -8.589 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[13] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.620      ;
+; -8.589 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[15] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.620      ;
+; -8.589 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[16] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.620      ;
+; -8.589 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[17] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.620      ;
+; -8.589 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[19] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.620      ;
+; -8.583 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[14] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.614      ;
+; -8.583 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[10] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.614      ;
+; -8.583 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[11] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.614      ;
+; -8.583 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[18] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.614      ;
+; -8.583 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[12] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.614      ;
+; -8.583 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[13] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.614      ;
+; -8.583 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[15] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.614      ;
+; -8.583 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[16] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.614      ;
+; -8.583 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[17] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.614      ;
+; -8.583 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[19] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.614      ;
+; -8.571 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[14] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.602      ;
+; -8.571 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[10] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.602      ;
+; -8.571 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[11] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.602      ;
+; -8.571 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[18] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.602      ;
+; -8.571 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[12] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.602      ;
+; -8.571 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[13] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.602      ;
+; -8.571 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[15] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.602      ;
+; -8.571 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[16] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.602      ;
+; -8.571 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[17] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.602      ;
+; -8.571 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[19] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.602      ;
+; -8.557 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[14] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.588      ;
+; -8.557 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[10] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.588      ;
+; -8.557 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[11] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.588      ;
+; -8.557 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[18] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.588      ;
+; -8.557 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[12] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.588      ;
+; -8.557 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[13] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.588      ;
+; -8.557 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[15] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.588      ;
+; -8.557 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[16] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.588      ;
+; -8.557 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[17] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.588      ;
+; -8.557 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[19] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.588      ;
+; -8.552 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[14] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.583      ;
+; -8.552 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[10] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.583      ;
+; -8.552 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[11] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.583      ;
+; -8.552 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[18] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.583      ;
+; -8.552 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[12] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.583      ;
+; -8.552 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[13] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.583      ;
+; -8.552 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[15] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.583      ;
+; -8.552 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[16] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.583      ;
+; -8.552 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[17] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.583      ;
+; -8.552 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[19] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.583      ;
+; -8.445 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[14] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.476      ;
+; -8.445 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[10] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.476      ;
+; -8.445 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[11] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.476      ;
+; -8.445 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[18] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.476      ;
+; -8.445 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[12] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.476      ;
+; -8.445 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[13] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.476      ;
+; -8.445 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[15] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.476      ;
+; -8.445 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[16] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.476      ;
+; -8.445 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[17] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.476      ;
+; -8.445 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[19] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.476      ;
+; -8.375 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[14] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.406      ;
+; -8.375 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[10] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.406      ;
+; -8.375 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[11] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.406      ;
+; -8.375 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[18] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.406      ;
+; -8.375 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[12] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.406      ;
+; -8.375 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[13] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.406      ;
+; -8.375 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[15] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.406      ;
+; -8.375 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[16] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.406      ;
+; -8.375 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[17] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.406      ;
+; -8.375 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[19] ; clk          ; clk         ; 1.000        ; 0.030      ; 9.406      ;
+; -8.041 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[0]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.082      ;
+; -8.041 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[1]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.082      ;
+; -8.041 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[2]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.082      ;
+; -8.041 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[3]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.082      ;
+; -8.041 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[4]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.082      ;
+; -8.041 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[5]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.082      ;
+; -8.041 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[6]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.082      ;
+; -8.041 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[7]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.082      ;
+; -8.041 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[8]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.082      ;
+; -8.041 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[9]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.082      ;
+; -8.029 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[0]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.070      ;
+; -8.029 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[1]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.070      ;
+; -8.029 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[2]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.070      ;
+; -8.029 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[3]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.070      ;
+; -8.029 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[4]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.070      ;
+; -8.029 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[5]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.070      ;
+; -8.029 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[6]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.070      ;
+; -8.029 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[7]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.070      ;
+; -8.029 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[8]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.070      ;
+; -8.029 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[9]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.070      ;
+; -8.001 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[0]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.042      ;
+; -8.001 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[1]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.042      ;
+; -8.001 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[2]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.042      ;
+; -8.001 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[3]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.042      ;
+; -8.001 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[4]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.042      ;
+; -8.001 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[5]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.042      ;
+; -8.001 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[6]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.042      ;
+; -8.001 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[7]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.042      ;
+; -8.001 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[8]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.042      ;
+; -8.001 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[9]  ; clk          ; clk         ; 1.000        ; 0.040      ; 9.042      ;
++--------+-------------------------------------------------------------------------------------+------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                                                                                                            ;
++-------+-----------------+--------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node       ; To Node                                                                                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------+--------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.434 ; state.PLAY      ; state.PLAY                                                                                                   ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
+; 0.454 ; state.IDLE      ; state.IDLE                                                                                                   ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.498 ; hz_cnt[19]      ; hz_cnt[19]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.100      ; 0.810      ;
+; 0.705 ; state.PLAY_END  ; state.IDLE                                                                                                   ; clk          ; clk         ; 0.000        ; 0.080      ; 0.997      ;
+; 0.740 ; hz_cnt[9]       ; hz_cnt[9]                                                                                                    ; clk          ; clk         ; 0.000        ; 0.101      ; 1.053      ;
+; 0.743 ; hz_cnt[3]       ; hz_cnt[3]                                                                                                    ; clk          ; clk         ; 0.000        ; 0.101      ; 1.056      ;
+; 0.743 ; hz_cnt[11]      ; hz_cnt[11]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.100      ; 1.055      ;
+; 0.743 ; hz_cnt[13]      ; hz_cnt[13]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.100      ; 1.055      ;
+; 0.743 ; hz_cnt[15]      ; hz_cnt[15]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.100      ; 1.055      ;
+; 0.745 ; hz_cnt[10]      ; hz_cnt[10]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.100      ; 1.057      ;
+; 0.746 ; hz_cnt[12]      ; hz_cnt[12]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.100      ; 1.058      ;
+; 0.746 ; hz_cnt[16]      ; hz_cnt[16]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.100      ; 1.058      ;
+; 0.747 ; hz_cnt[14]      ; hz_cnt[14]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.100      ; 1.059      ;
+; 0.753 ; hz_cnt[17]      ; hz_cnt[17]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.100      ; 1.065      ;
+; 0.756 ; hz_cnt[18]      ; hz_cnt[18]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.100      ; 1.068      ;
+; 0.761 ; music_cnt[15]   ; music_cnt[15]                                                                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.053      ;
+; 0.761 ; music_cnt[3]    ; music_cnt[3]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.080      ; 1.053      ;
+; 0.761 ; play_cnt[19]    ; play_cnt[19]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.054      ;
+; 0.761 ; play_cnt[15]    ; play_cnt[15]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.080      ; 1.053      ;
+; 0.761 ; play_cnt[3]     ; play_cnt[3]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.053      ;
+; 0.762 ; music_cnt[11]   ; music_cnt[11]                                                                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.054      ;
+; 0.762 ; music_cnt[13]   ; music_cnt[13]                                                                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.054      ;
+; 0.762 ; music_cnt[19]   ; music_cnt[19]                                                                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.054      ;
+; 0.762 ; music_cnt[5]    ; music_cnt[5]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.080      ; 1.054      ;
+; 0.762 ; play_cnt[29]    ; play_cnt[29]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.055      ;
+; 0.762 ; play_cnt[27]    ; play_cnt[27]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.055      ;
+; 0.762 ; play_cnt[21]    ; play_cnt[21]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.055      ;
+; 0.762 ; play_cnt[17]    ; play_cnt[17]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.055      ;
+; 0.762 ; play_cnt[11]    ; play_cnt[11]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.080      ; 1.054      ;
+; 0.762 ; play_cnt[13]    ; play_cnt[13]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.080      ; 1.054      ;
+; 0.762 ; play_cnt[5]     ; play_cnt[5]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.054      ;
+; 0.762 ; play_cnt[1]     ; play_cnt[1]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.054      ;
+; 0.763 ; music_cnt[17]   ; music_cnt[17]                                                                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.055      ;
+; 0.763 ; music_cnt[27]   ; music_cnt[27]                                                                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.055      ;
+; 0.763 ; music_cnt[29]   ; music_cnt[29]                                                                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.055      ;
+; 0.763 ; music_cnt[21]   ; music_cnt[21]                                                                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.055      ;
+; 0.763 ; play_cnt[31]    ; play_cnt[31]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; play_cnt[16]    ; play_cnt[16]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.056      ;
+; 0.764 ; music_cnt[9]    ; music_cnt[9]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.080      ; 1.056      ;
+; 0.764 ; music_cnt[31]   ; music_cnt[31]                                                                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.056      ;
+; 0.764 ; music_cnt[16]   ; music_cnt[16]                                                                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.056      ;
+; 0.764 ; music_cnt[7]    ; music_cnt[7]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.080      ; 1.056      ;
+; 0.764 ; music_cnt[6]    ; music_cnt[6]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.080      ; 1.056      ;
+; 0.764 ; music_cnt[2]    ; music_cnt[2]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.080      ; 1.056      ;
+; 0.764 ; play_cnt[25]    ; play_cnt[25]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; play_cnt[22]    ; play_cnt[22]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; play_cnt[23]    ; play_cnt[23]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; play_cnt[18]    ; play_cnt[18]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; play_cnt[7]     ; play_cnt[7]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.056      ;
+; 0.764 ; play_cnt[6]     ; play_cnt[6]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.056      ;
+; 0.764 ; play_cnt[2]     ; play_cnt[2]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.056      ;
+; 0.764 ; play_cnt[9]     ; play_cnt[9]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.056      ;
+; 0.765 ; music_cnt[12]   ; music_cnt[12]                                                                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
+; 0.765 ; music_cnt[14]   ; music_cnt[14]                                                                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
+; 0.765 ; music_cnt[18]   ; music_cnt[18]                                                                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
+; 0.765 ; music_cnt[25]   ; music_cnt[25]                                                                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
+; 0.765 ; music_cnt[23]   ; music_cnt[23]                                                                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
+; 0.765 ; music_cnt[22]   ; music_cnt[22]                                                                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
+; 0.765 ; music_cnt[4]    ; music_cnt[4]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
+; 0.765 ; play_cnt[30]    ; play_cnt[30]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.058      ;
+; 0.765 ; play_cnt[20]    ; play_cnt[20]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.058      ;
+; 0.765 ; play_cnt[14]    ; play_cnt[14]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
+; 0.765 ; play_cnt[12]    ; play_cnt[12]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
+; 0.765 ; play_cnt[4]     ; play_cnt[4]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
+; 0.766 ; music_cnt[30]   ; music_cnt[30]                                                                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.058      ;
+; 0.766 ; music_cnt[20]   ; music_cnt[20]                                                                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.058      ;
+; 0.766 ; music_cnt[10]   ; music_cnt[10]                                                                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.058      ;
+; 0.766 ; play_cnt[28]    ; play_cnt[28]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.059      ;
+; 0.766 ; play_cnt[26]    ; play_cnt[26]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.059      ;
+; 0.766 ; play_cnt[24]    ; play_cnt[24]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.059      ;
+; 0.766 ; play_cnt[10]    ; play_cnt[10]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.080      ; 1.058      ;
+; 0.766 ; play_cnt[8]     ; play_cnt[8]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.058      ;
+; 0.767 ; music_cnt[28]   ; music_cnt[28]                                                                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.059      ;
+; 0.767 ; music_cnt[26]   ; music_cnt[26]                                                                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.059      ;
+; 0.767 ; music_cnt[24]   ; music_cnt[24]                                                                                                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.059      ;
+; 0.786 ; music_cnt[1]    ; music_cnt[1]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.080      ; 1.078      ;
+; 0.787 ; music_cnt[0]    ; music_cnt[0]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.080      ; 1.079      ;
+; 0.787 ; play_cnt[0]     ; play_cnt[0]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.079      ;
+; 0.789 ; music_cnt[8]    ; music_cnt[8]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.080      ; 1.081      ;
+; 0.792 ; state.PLAY_WAIT ; state.PLAY_END                                                                                               ; clk          ; clk         ; 0.000        ; 0.080      ; 1.084      ;
+; 0.816 ; music_cnt[6]    ; music1_rom:m1|altsyncram:altsyncram_component|altsyncram_t491:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.491      ; 1.561      ;
+; 0.859 ; music_cnt[3]    ; music1_rom:m1|altsyncram:altsyncram_component|altsyncram_t491:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.491      ; 1.604      ;
+; 0.871 ; music_cnt[8]    ; music1_rom:m1|altsyncram:altsyncram_component|altsyncram_t491:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.491      ; 1.616      ;
+; 0.927 ; hz_cnt[8]       ; hz_cnt[8]                                                                                                    ; clk          ; clk         ; 0.000        ; 0.101      ; 1.240      ;
+; 0.928 ; state.IDLE      ; state.PLAY                                                                                                   ; clk          ; clk         ; 0.000        ; 0.574      ; 1.714      ;
+; 0.936 ; hz_cnt[5]       ; hz_cnt[5]                                                                                                    ; clk          ; clk         ; 0.000        ; 0.101      ; 1.249      ;
+; 0.947 ; hz_cnt[2]       ; hz_cnt[2]                                                                                                    ; clk          ; clk         ; 0.000        ; 0.101      ; 1.260      ;
+; 0.976 ; state.PLAY_WAIT ; state.PLAY                                                                                                   ; clk          ; clk         ; 0.000        ; 0.574      ; 1.762      ;
+; 1.008 ; state.PLAY      ; state.PLAY_WAIT                                                                                              ; clk          ; clk         ; 0.000        ; -0.394     ; 0.826      ;
+; 1.094 ; hz_cnt[9]       ; hz_cnt[10]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.102      ; 1.408      ;
+; 1.097 ; hz_cnt[3]       ; hz_cnt[4]                                                                                                    ; clk          ; clk         ; 0.000        ; 0.101      ; 1.410      ;
+; 1.097 ; hz_cnt[11]      ; hz_cnt[12]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.100      ; 1.409      ;
+; 1.098 ; music_cnt[4]    ; music1_rom:m1|altsyncram:altsyncram_component|altsyncram_t491:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.491      ; 1.843      ;
+; 1.098 ; hz_cnt[15]      ; hz_cnt[16]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.100      ; 1.410      ;
+; 1.098 ; hz_cnt[13]      ; hz_cnt[14]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.100      ; 1.410      ;
+; 1.099 ; music_cnt[5]    ; music1_rom:m1|altsyncram:altsyncram_component|altsyncram_t491:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.491      ; 1.844      ;
+; 1.106 ; hz_cnt[10]      ; hz_cnt[11]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.100      ; 1.418      ;
+; 1.107 ; hz_cnt[17]      ; hz_cnt[18]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.100      ; 1.419      ;
+; 1.107 ; hz_cnt[12]      ; hz_cnt[13]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.100      ; 1.419      ;
+; 1.107 ; hz_cnt[16]      ; hz_cnt[17]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.100      ; 1.419      ;
++-------+-----------------+--------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 111.47 MHz ; 111.47 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -7.971 ; -432.529          ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.384 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.201 ; -231.396                        ;
++-------+--------+---------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                                                                               ;
++--------+-------------------------------------------------------------------------------------+------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                           ; To Node    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------------------------------------------------+------------+--------------+-------------+--------------+------------+------------+
+; -7.971 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[14] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.027      ;
+; -7.971 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[10] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.027      ;
+; -7.971 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[11] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.027      ;
+; -7.971 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[18] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.027      ;
+; -7.971 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[12] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.027      ;
+; -7.971 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[13] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.027      ;
+; -7.971 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[15] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.027      ;
+; -7.971 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[16] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.027      ;
+; -7.971 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[17] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.027      ;
+; -7.971 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[19] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.027      ;
+; -7.947 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[14] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.003      ;
+; -7.947 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[10] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.003      ;
+; -7.947 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[11] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.003      ;
+; -7.947 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[18] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.003      ;
+; -7.947 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[12] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.003      ;
+; -7.947 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[13] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.003      ;
+; -7.947 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[15] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.003      ;
+; -7.947 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[16] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.003      ;
+; -7.947 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[17] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.003      ;
+; -7.947 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[19] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.003      ;
+; -7.945 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[14] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.001      ;
+; -7.945 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[10] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.001      ;
+; -7.945 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[11] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.001      ;
+; -7.945 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[18] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.001      ;
+; -7.945 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[12] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.001      ;
+; -7.945 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[13] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.001      ;
+; -7.945 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[15] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.001      ;
+; -7.945 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[16] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.001      ;
+; -7.945 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[17] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.001      ;
+; -7.945 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[19] ; clk          ; clk         ; 1.000        ; 0.054      ; 9.001      ;
+; -7.931 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[14] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.987      ;
+; -7.931 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[10] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.987      ;
+; -7.931 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[11] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.987      ;
+; -7.931 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[18] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.987      ;
+; -7.931 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[12] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.987      ;
+; -7.931 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[13] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.987      ;
+; -7.931 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[15] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.987      ;
+; -7.931 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[16] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.987      ;
+; -7.931 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[17] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.987      ;
+; -7.931 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[19] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.987      ;
+; -7.921 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[14] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.977      ;
+; -7.921 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[10] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.977      ;
+; -7.921 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[11] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.977      ;
+; -7.921 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[18] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.977      ;
+; -7.921 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[12] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.977      ;
+; -7.921 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[13] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.977      ;
+; -7.921 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[15] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.977      ;
+; -7.921 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[16] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.977      ;
+; -7.921 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[17] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.977      ;
+; -7.921 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[19] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.977      ;
+; -7.774 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[14] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.830      ;
+; -7.774 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[10] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.830      ;
+; -7.774 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[11] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.830      ;
+; -7.774 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[18] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.830      ;
+; -7.774 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[12] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.830      ;
+; -7.774 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[13] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.830      ;
+; -7.774 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[15] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.830      ;
+; -7.774 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[16] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.830      ;
+; -7.774 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[17] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.830      ;
+; -7.774 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[19] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.830      ;
+; -7.724 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[14] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.780      ;
+; -7.724 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[10] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.780      ;
+; -7.724 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[11] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.780      ;
+; -7.724 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[18] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.780      ;
+; -7.724 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[12] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.780      ;
+; -7.724 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[13] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.780      ;
+; -7.724 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[15] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.780      ;
+; -7.724 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[16] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.780      ;
+; -7.724 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[17] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.780      ;
+; -7.724 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[19] ; clk          ; clk         ; 1.000        ; 0.054      ; 8.780      ;
+; -7.395 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[0]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.460      ;
+; -7.395 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[1]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.460      ;
+; -7.395 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[2]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.460      ;
+; -7.395 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[3]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.460      ;
+; -7.395 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[4]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.460      ;
+; -7.395 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[5]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.460      ;
+; -7.395 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[6]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.460      ;
+; -7.395 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[7]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.460      ;
+; -7.395 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[8]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.460      ;
+; -7.395 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[9]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.460      ;
+; -7.371 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[0]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.436      ;
+; -7.371 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[1]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.436      ;
+; -7.371 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[2]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.436      ;
+; -7.371 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[3]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.436      ;
+; -7.371 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[4]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.436      ;
+; -7.371 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[5]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.436      ;
+; -7.371 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[6]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.436      ;
+; -7.371 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[7]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.436      ;
+; -7.371 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[8]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.436      ;
+; -7.371 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[9]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.436      ;
+; -7.369 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[0]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.434      ;
+; -7.369 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[1]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.434      ;
+; -7.369 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[2]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.434      ;
+; -7.369 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[3]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.434      ;
+; -7.369 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[4]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.434      ;
+; -7.369 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[5]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.434      ;
+; -7.369 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[6]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.434      ;
+; -7.369 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[7]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.434      ;
+; -7.369 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[8]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.434      ;
+; -7.369 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[9]  ; clk          ; clk         ; 1.000        ; 0.063      ; 8.434      ;
++--------+-------------------------------------------------------------------------------------+------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                                                                                                             ;
++-------+-----------------+--------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node       ; To Node                                                                                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------+--------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.384 ; state.PLAY      ; state.PLAY                                                                                                   ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
+; 0.402 ; state.IDLE      ; state.IDLE                                                                                                   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.459 ; hz_cnt[19]      ; hz_cnt[19]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.091      ; 0.745      ;
+; 0.661 ; state.PLAY_END  ; state.IDLE                                                                                                   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.928      ;
+; 0.686 ; hz_cnt[9]       ; hz_cnt[9]                                                                                                    ; clk          ; clk         ; 0.000        ; 0.091      ; 0.972      ;
+; 0.687 ; hz_cnt[13]      ; hz_cnt[13]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.091      ; 0.973      ;
+; 0.688 ; hz_cnt[15]      ; hz_cnt[15]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.091      ; 0.974      ;
+; 0.689 ; hz_cnt[11]      ; hz_cnt[11]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.091      ; 0.975      ;
+; 0.690 ; hz_cnt[3]       ; hz_cnt[3]                                                                                                    ; clk          ; clk         ; 0.000        ; 0.091      ; 0.976      ;
+; 0.690 ; hz_cnt[16]      ; hz_cnt[16]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.091      ; 0.976      ;
+; 0.692 ; hz_cnt[10]      ; hz_cnt[10]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.091      ; 0.978      ;
+; 0.692 ; hz_cnt[12]      ; hz_cnt[12]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.091      ; 0.978      ;
+; 0.693 ; hz_cnt[14]      ; hz_cnt[14]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.091      ; 0.979      ;
+; 0.699 ; hz_cnt[17]      ; hz_cnt[17]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.091      ; 0.985      ;
+; 0.701 ; hz_cnt[18]      ; hz_cnt[18]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.091      ; 0.987      ;
+; 0.705 ; music_cnt[13]   ; music_cnt[13]                                                                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.972      ;
+; 0.705 ; music_cnt[15]   ; music_cnt[15]                                                                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.972      ;
+; 0.705 ; music_cnt[5]    ; music_cnt[5]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.972      ;
+; 0.705 ; music_cnt[3]    ; music_cnt[3]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.972      ;
+; 0.705 ; play_cnt[15]    ; play_cnt[15]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.972      ;
+; 0.705 ; play_cnt[13]    ; play_cnt[13]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.972      ;
+; 0.705 ; play_cnt[5]     ; play_cnt[5]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.972      ;
+; 0.705 ; play_cnt[3]     ; play_cnt[3]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.972      ;
+; 0.706 ; music_cnt[11]   ; music_cnt[11]                                                                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.706 ; music_cnt[19]   ; music_cnt[19]                                                                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.706 ; music_cnt[29]   ; music_cnt[29]                                                                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.706 ; music_cnt[21]   ; music_cnt[21]                                                                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.706 ; play_cnt[29]    ; play_cnt[29]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.706 ; play_cnt[21]    ; play_cnt[21]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.706 ; play_cnt[19]    ; play_cnt[19]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.706 ; play_cnt[11]    ; play_cnt[11]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.707 ; music_cnt[17]   ; music_cnt[17]                                                                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.707 ; music_cnt[27]   ; music_cnt[27]                                                                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.707 ; play_cnt[27]    ; play_cnt[27]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.707 ; play_cnt[17]    ; play_cnt[17]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.707 ; play_cnt[1]     ; play_cnt[1]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.708 ; music_cnt[9]    ; music_cnt[9]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.708 ; music_cnt[31]   ; music_cnt[31]                                                                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.708 ; music_cnt[22]   ; music_cnt[22]                                                                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.708 ; music_cnt[6]    ; music_cnt[6]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.708 ; play_cnt[31]    ; play_cnt[31]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.708 ; play_cnt[22]    ; play_cnt[22]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.708 ; play_cnt[6]     ; play_cnt[6]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.708 ; play_cnt[9]     ; play_cnt[9]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.709 ; music_cnt[25]   ; music_cnt[25]                                                                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.976      ;
+; 0.709 ; music_cnt[23]   ; music_cnt[23]                                                                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.976      ;
+; 0.709 ; music_cnt[7]    ; music_cnt[7]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.976      ;
+; 0.709 ; play_cnt[25]    ; play_cnt[25]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.976      ;
+; 0.709 ; play_cnt[23]    ; play_cnt[23]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.976      ;
+; 0.709 ; play_cnt[7]     ; play_cnt[7]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.976      ;
+; 0.710 ; music_cnt[14]   ; music_cnt[14]                                                                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.977      ;
+; 0.710 ; music_cnt[16]   ; music_cnt[16]                                                                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.977      ;
+; 0.710 ; music_cnt[2]    ; music_cnt[2]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.977      ;
+; 0.710 ; play_cnt[16]    ; play_cnt[16]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.977      ;
+; 0.710 ; play_cnt[14]    ; play_cnt[14]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.977      ;
+; 0.710 ; play_cnt[2]     ; play_cnt[2]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.977      ;
+; 0.711 ; music_cnt[12]   ; music_cnt[12]                                                                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.978      ;
+; 0.711 ; music_cnt[18]   ; music_cnt[18]                                                                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.978      ;
+; 0.711 ; music_cnt[10]   ; music_cnt[10]                                                                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.978      ;
+; 0.711 ; music_cnt[4]    ; music_cnt[4]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.978      ;
+; 0.711 ; play_cnt[18]    ; play_cnt[18]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.978      ;
+; 0.711 ; play_cnt[12]    ; play_cnt[12]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.978      ;
+; 0.711 ; play_cnt[10]    ; play_cnt[10]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.978      ;
+; 0.711 ; play_cnt[4]     ; play_cnt[4]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.978      ;
+; 0.712 ; music_cnt[28]   ; music_cnt[28]                                                                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.979      ;
+; 0.712 ; music_cnt[30]   ; music_cnt[30]                                                                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.979      ;
+; 0.712 ; music_cnt[26]   ; music_cnt[26]                                                                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.979      ;
+; 0.712 ; music_cnt[20]   ; music_cnt[20]                                                                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.979      ;
+; 0.712 ; play_cnt[30]    ; play_cnt[30]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.979      ;
+; 0.712 ; play_cnt[28]    ; play_cnt[28]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.979      ;
+; 0.712 ; play_cnt[26]    ; play_cnt[26]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.979      ;
+; 0.712 ; play_cnt[20]    ; play_cnt[20]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.979      ;
+; 0.712 ; play_cnt[8]     ; play_cnt[8]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.979      ;
+; 0.713 ; music_cnt[24]   ; music_cnt[24]                                                                                                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.980      ;
+; 0.713 ; play_cnt[24]    ; play_cnt[24]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.980      ;
+; 0.729 ; music_cnt[1]    ; music_cnt[1]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.996      ;
+; 0.733 ; music_cnt[8]    ; music_cnt[8]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 1.000      ;
+; 0.733 ; music_cnt[0]    ; music_cnt[0]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.072      ; 1.000      ;
+; 0.733 ; play_cnt[0]     ; play_cnt[0]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.000      ;
+; 0.734 ; state.PLAY_WAIT ; state.PLAY_END                                                                                               ; clk          ; clk         ; 0.000        ; 0.072      ; 1.001      ;
+; 0.758 ; music_cnt[6]    ; music1_rom:m1|altsyncram:altsyncram_component|altsyncram_t491:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.433      ; 1.421      ;
+; 0.798 ; music_cnt[3]    ; music1_rom:m1|altsyncram:altsyncram_component|altsyncram_t491:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.433      ; 1.461      ;
+; 0.810 ; music_cnt[8]    ; music1_rom:m1|altsyncram:altsyncram_component|altsyncram_t491:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.433      ; 1.473      ;
+; 0.837 ; hz_cnt[8]       ; hz_cnt[8]                                                                                                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.123      ;
+; 0.842 ; state.IDLE      ; state.PLAY                                                                                                   ; clk          ; clk         ; 0.000        ; 0.535      ; 1.572      ;
+; 0.852 ; hz_cnt[2]       ; hz_cnt[2]                                                                                                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.138      ;
+; 0.852 ; hz_cnt[5]       ; hz_cnt[5]                                                                                                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.138      ;
+; 0.904 ; state.PLAY_WAIT ; state.PLAY                                                                                                   ; clk          ; clk         ; 0.000        ; 0.535      ; 1.634      ;
+; 0.944 ; state.PLAY      ; state.PLAY_WAIT                                                                                              ; clk          ; clk         ; 0.000        ; -0.373     ; 0.766      ;
+; 1.003 ; music_cnt[5]    ; music1_rom:m1|altsyncram:altsyncram_component|altsyncram_t491:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.433      ; 1.666      ;
+; 1.006 ; music_cnt[4]    ; music1_rom:m1|altsyncram:altsyncram_component|altsyncram_t491:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.433      ; 1.669      ;
+; 1.007 ; hz_cnt[9]       ; hz_cnt[10]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.294      ;
+; 1.009 ; hz_cnt[10]      ; hz_cnt[11]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.091      ; 1.295      ;
+; 1.009 ; hz_cnt[13]      ; hz_cnt[14]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.091      ; 1.295      ;
+; 1.009 ; hz_cnt[16]      ; hz_cnt[17]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.091      ; 1.295      ;
+; 1.010 ; hz_cnt[12]      ; hz_cnt[13]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.091      ; 1.296      ;
+; 1.010 ; hz_cnt[15]      ; hz_cnt[16]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.091      ; 1.296      ;
+; 1.011 ; hz_cnt[14]      ; hz_cnt[15]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.091      ; 1.297      ;
+; 1.013 ; hz_cnt[11]      ; hz_cnt[12]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.091      ; 1.299      ;
+; 1.014 ; hz_cnt[3]       ; hz_cnt[4]                                                                                                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.300      ;
++-------+-----------------+--------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -3.271 ; -135.448          ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.179 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -177.759                        ;
++-------+--------+---------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                                                                                               ;
++--------+-------------------------------------------------------------------------------------+------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                           ; To Node    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------------------------------------------------+------------+--------------+-------------+--------------+------------+------------+
+; -3.271 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[14] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.238      ;
+; -3.271 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[10] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.238      ;
+; -3.271 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[11] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.238      ;
+; -3.271 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[18] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.238      ;
+; -3.271 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[12] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.238      ;
+; -3.271 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[13] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.238      ;
+; -3.271 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[15] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.238      ;
+; -3.271 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[16] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.238      ;
+; -3.271 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[17] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.238      ;
+; -3.271 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[19] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.238      ;
+; -3.241 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[14] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.208      ;
+; -3.241 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[10] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.208      ;
+; -3.241 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[11] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.208      ;
+; -3.241 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[18] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.208      ;
+; -3.241 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[12] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.208      ;
+; -3.241 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[13] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.208      ;
+; -3.241 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[15] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.208      ;
+; -3.241 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[16] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.208      ;
+; -3.241 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[17] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.208      ;
+; -3.241 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[19] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.208      ;
+; -3.236 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[14] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.203      ;
+; -3.236 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[10] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.203      ;
+; -3.236 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[11] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.203      ;
+; -3.236 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[18] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.203      ;
+; -3.236 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[12] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.203      ;
+; -3.236 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[13] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.203      ;
+; -3.236 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[15] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.203      ;
+; -3.236 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[16] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.203      ;
+; -3.236 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[17] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.203      ;
+; -3.236 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[19] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.203      ;
+; -3.163 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[14] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.130      ;
+; -3.163 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[10] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.130      ;
+; -3.163 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[11] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.130      ;
+; -3.163 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[18] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.130      ;
+; -3.163 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[12] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.130      ;
+; -3.163 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[13] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.130      ;
+; -3.163 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[15] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.130      ;
+; -3.163 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[16] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.130      ;
+; -3.163 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[17] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.130      ;
+; -3.163 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[0] ; hz_cnt[19] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.130      ;
+; -3.162 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[14] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.129      ;
+; -3.162 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[10] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.129      ;
+; -3.162 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[11] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.129      ;
+; -3.162 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[18] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.129      ;
+; -3.162 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[12] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.129      ;
+; -3.162 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[13] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.129      ;
+; -3.162 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[15] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.129      ;
+; -3.162 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[16] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.129      ;
+; -3.162 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[17] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.129      ;
+; -3.162 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[5] ; hz_cnt[19] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.129      ;
+; -3.127 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[14] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.094      ;
+; -3.127 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[10] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.094      ;
+; -3.127 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[11] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.094      ;
+; -3.127 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[18] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.094      ;
+; -3.127 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[12] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.094      ;
+; -3.127 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[13] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.094      ;
+; -3.127 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[15] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.094      ;
+; -3.127 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[16] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.094      ;
+; -3.127 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[17] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.094      ;
+; -3.127 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[6] ; hz_cnt[19] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.094      ;
+; -3.080 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[14] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.047      ;
+; -3.080 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[10] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.047      ;
+; -3.080 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[11] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.047      ;
+; -3.080 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[18] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.047      ;
+; -3.080 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[12] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.047      ;
+; -3.080 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[13] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.047      ;
+; -3.080 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[15] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.047      ;
+; -3.080 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[16] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.047      ;
+; -3.080 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[17] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.047      ;
+; -3.080 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[3] ; hz_cnt[19] ; clk          ; clk         ; 1.000        ; -0.020     ; 4.047      ;
+; -2.999 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[0]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.971      ;
+; -2.999 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[1]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.971      ;
+; -2.999 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[2]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.971      ;
+; -2.999 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[3]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.971      ;
+; -2.999 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[4]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.971      ;
+; -2.999 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[5]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.971      ;
+; -2.999 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[6]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.971      ;
+; -2.999 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[7]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.971      ;
+; -2.999 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[8]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.971      ;
+; -2.999 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[2] ; hz_cnt[9]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.971      ;
+; -2.969 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[0]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.941      ;
+; -2.969 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[1]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.941      ;
+; -2.969 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[2]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.941      ;
+; -2.969 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[3]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.941      ;
+; -2.969 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[4]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.941      ;
+; -2.969 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[5]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.941      ;
+; -2.969 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[6]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.941      ;
+; -2.969 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[7]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.941      ;
+; -2.969 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[8]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.941      ;
+; -2.969 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[1] ; hz_cnt[9]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.941      ;
+; -2.964 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[0]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.936      ;
+; -2.964 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[1]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.936      ;
+; -2.964 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[2]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.936      ;
+; -2.964 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[3]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.936      ;
+; -2.964 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[4]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.936      ;
+; -2.964 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[5]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.936      ;
+; -2.964 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[6]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.936      ;
+; -2.964 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[7]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.936      ;
+; -2.964 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[8]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.936      ;
+; -2.964 ; music2_rom:m2|altsyncram:altsyncram_component|altsyncram_f691:auto_generated|q_a[4] ; hz_cnt[9]  ; clk          ; clk         ; 1.000        ; -0.015     ; 3.936      ;
++--------+-------------------------------------------------------------------------------------+------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                                                                                                             ;
++-------+-----------------+--------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node       ; To Node                                                                                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------+--------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.179 ; state.PLAY      ; state.PLAY                                                                                                   ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.187 ; state.IDLE      ; state.IDLE                                                                                                   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.202 ; hz_cnt[19]      ; hz_cnt[19]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.044      ; 0.330      ;
+; 0.276 ; state.PLAY_END  ; state.IDLE                                                                                                   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.396      ;
+; 0.295 ; hz_cnt[9]       ; hz_cnt[9]                                                                                                    ; clk          ; clk         ; 0.000        ; 0.045      ; 0.424      ;
+; 0.297 ; hz_cnt[3]       ; hz_cnt[3]                                                                                                    ; clk          ; clk         ; 0.000        ; 0.045      ; 0.426      ;
+; 0.297 ; hz_cnt[11]      ; hz_cnt[11]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.044      ; 0.425      ;
+; 0.297 ; hz_cnt[13]      ; hz_cnt[13]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.044      ; 0.425      ;
+; 0.297 ; hz_cnt[15]      ; hz_cnt[15]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.044      ; 0.425      ;
+; 0.298 ; hz_cnt[10]      ; hz_cnt[10]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.044      ; 0.426      ;
+; 0.298 ; hz_cnt[16]      ; hz_cnt[16]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.044      ; 0.426      ;
+; 0.299 ; hz_cnt[12]      ; hz_cnt[12]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.044      ; 0.427      ;
+; 0.300 ; hz_cnt[14]      ; hz_cnt[14]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.044      ; 0.428      ;
+; 0.303 ; hz_cnt[18]      ; hz_cnt[18]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.044      ; 0.431      ;
+; 0.303 ; hz_cnt[17]      ; hz_cnt[17]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.044      ; 0.431      ;
+; 0.303 ; music_cnt[15]   ; music_cnt[15]                                                                                                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.423      ;
+; 0.303 ; play_cnt[15]    ; play_cnt[15]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.423      ;
+; 0.304 ; music_cnt[13]   ; music_cnt[13]                                                                                                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.304 ; music_cnt[31]   ; music_cnt[31]                                                                                                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.304 ; music_cnt[5]    ; music_cnt[5]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.304 ; music_cnt[3]    ; music_cnt[3]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.304 ; play_cnt[31]    ; play_cnt[31]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.304 ; play_cnt[13]    ; play_cnt[13]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.304 ; play_cnt[5]     ; play_cnt[5]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.304 ; play_cnt[3]     ; play_cnt[3]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.305 ; music_cnt[11]   ; music_cnt[11]                                                                                                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; music_cnt[17]   ; music_cnt[17]                                                                                                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; music_cnt[19]   ; music_cnt[19]                                                                                                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; music_cnt[27]   ; music_cnt[27]                                                                                                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; music_cnt[29]   ; music_cnt[29]                                                                                                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; music_cnt[21]   ; music_cnt[21]                                                                                                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; music_cnt[7]    ; music_cnt[7]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; music_cnt[6]    ; music_cnt[6]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; play_cnt[29]    ; play_cnt[29]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; play_cnt[27]    ; play_cnt[27]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; play_cnt[21]    ; play_cnt[21]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; play_cnt[19]    ; play_cnt[19]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; play_cnt[17]    ; play_cnt[17]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; play_cnt[11]    ; play_cnt[11]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; play_cnt[7]     ; play_cnt[7]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; play_cnt[6]     ; play_cnt[6]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; play_cnt[1]     ; play_cnt[1]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.306 ; music_cnt[9]    ; music_cnt[9]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; music_cnt[14]   ; music_cnt[14]                                                                                                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; music_cnt[25]   ; music_cnt[25]                                                                                                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; music_cnt[23]   ; music_cnt[23]                                                                                                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; music_cnt[22]   ; music_cnt[22]                                                                                                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; music_cnt[16]   ; music_cnt[16]                                                                                                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; music_cnt[2]    ; music_cnt[2]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; play_cnt[25]    ; play_cnt[25]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; play_cnt[22]    ; play_cnt[22]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; play_cnt[23]    ; play_cnt[23]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; play_cnt[16]    ; play_cnt[16]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; play_cnt[14]    ; play_cnt[14]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; play_cnt[8]     ; play_cnt[8]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; play_cnt[2]     ; play_cnt[2]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; play_cnt[9]     ; play_cnt[9]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.307 ; music_cnt[12]   ; music_cnt[12]                                                                                                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; music_cnt[18]   ; music_cnt[18]                                                                                                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; music_cnt[30]   ; music_cnt[30]                                                                                                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; music_cnt[24]   ; music_cnt[24]                                                                                                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; music_cnt[20]   ; music_cnt[20]                                                                                                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; music_cnt[10]   ; music_cnt[10]                                                                                                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; music_cnt[4]    ; music_cnt[4]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; play_cnt[30]    ; play_cnt[30]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; play_cnt[24]    ; play_cnt[24]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; play_cnt[18]    ; play_cnt[18]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; play_cnt[20]    ; play_cnt[20]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; play_cnt[12]    ; play_cnt[12]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; play_cnt[10]    ; play_cnt[10]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; play_cnt[4]     ; play_cnt[4]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.308 ; music_cnt[28]   ; music_cnt[28]                                                                                                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.428      ;
+; 0.308 ; music_cnt[26]   ; music_cnt[26]                                                                                                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.428      ;
+; 0.308 ; play_cnt[28]    ; play_cnt[28]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.428      ;
+; 0.308 ; play_cnt[26]    ; play_cnt[26]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.428      ;
+; 0.316 ; music_cnt[1]    ; music_cnt[1]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.436      ;
+; 0.316 ; music_cnt[0]    ; music_cnt[0]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.436      ;
+; 0.316 ; play_cnt[0]     ; play_cnt[0]                                                                                                  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.436      ;
+; 0.318 ; music_cnt[8]    ; music_cnt[8]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.438      ;
+; 0.321 ; state.PLAY_WAIT ; state.PLAY_END                                                                                               ; clk          ; clk         ; 0.000        ; 0.036      ; 0.441      ;
+; 0.327 ; music_cnt[6]    ; music1_rom:m1|altsyncram:altsyncram_component|altsyncram_t491:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.227      ; 0.658      ;
+; 0.347 ; music_cnt[3]    ; music1_rom:m1|altsyncram:altsyncram_component|altsyncram_t491:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.227      ; 0.678      ;
+; 0.350 ; music_cnt[8]    ; music1_rom:m1|altsyncram:altsyncram_component|altsyncram_t491:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.227      ; 0.681      ;
+; 0.357 ; hz_cnt[8]       ; hz_cnt[8]                                                                                                    ; clk          ; clk         ; 0.000        ; 0.045      ; 0.486      ;
+; 0.364 ; hz_cnt[5]       ; hz_cnt[5]                                                                                                    ; clk          ; clk         ; 0.000        ; 0.045      ; 0.493      ;
+; 0.366 ; hz_cnt[2]       ; hz_cnt[2]                                                                                                    ; clk          ; clk         ; 0.000        ; 0.045      ; 0.495      ;
+; 0.393 ; state.PLAY_WAIT ; state.PLAY                                                                                                   ; clk          ; clk         ; 0.000        ; 0.235      ; 0.712      ;
+; 0.395 ; state.IDLE      ; state.PLAY                                                                                                   ; clk          ; clk         ; 0.000        ; 0.235      ; 0.714      ;
+; 0.400 ; state.PLAY      ; state.PLAY_WAIT                                                                                              ; clk          ; clk         ; 0.000        ; -0.155     ; 0.329      ;
+; 0.440 ; music_cnt[4]    ; music1_rom:m1|altsyncram:altsyncram_component|altsyncram_t491:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.227      ; 0.771      ;
+; 0.442 ; hz_cnt[9]       ; hz_cnt[10]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.047      ; 0.573      ;
+; 0.446 ; hz_cnt[3]       ; hz_cnt[4]                                                                                                    ; clk          ; clk         ; 0.000        ; 0.045      ; 0.575      ;
+; 0.446 ; hz_cnt[15]      ; hz_cnt[16]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.044      ; 0.574      ;
+; 0.446 ; hz_cnt[11]      ; hz_cnt[12]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.044      ; 0.574      ;
+; 0.446 ; hz_cnt[13]      ; hz_cnt[14]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.044      ; 0.574      ;
+; 0.447 ; music_cnt[5]    ; music1_rom:m1|altsyncram:altsyncram_component|altsyncram_t491:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.227      ; 0.778      ;
+; 0.452 ; hz_cnt[17]      ; hz_cnt[18]                                                                                                   ; clk          ; clk         ; 0.000        ; 0.044      ; 0.580      ;
+; 0.452 ; play_cnt[15]    ; play_cnt[16]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.572      ;
+; 0.453 ; music_cnt[7]    ; music1_rom:m1|altsyncram:altsyncram_component|altsyncram_t491:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.227      ; 0.784      ;
+; 0.453 ; music_cnt[5]    ; music_cnt[6]                                                                                                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.573      ;
++-------+-----------------+--------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -8.589   ; 0.179 ; N/A      ; N/A     ; -3.201              ;
+;  clk             ; -8.589   ; 0.179 ; N/A      ; N/A     ; -3.201              ;
+; Design-wide TNS  ; -480.848 ; 0.0   ; 0.0      ; 0.0     ; -231.396            ;
+;  clk             ; -480.848 ; 0.000 ; N/A      ; N/A     ; -231.396            ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                             ;
++--------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin    ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++--------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; buzzer ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++--------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------+
+; Input Transition Times                                   ;
++-------+--------------+-----------------+-----------------+
+; Pin   ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------+--------------+-----------------+-----------------+
+; clk   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; rst_n ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; key1  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
++-------+--------------+-----------------+-----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ;
++--------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin    ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++--------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; buzzer ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 8.89e-09 V                   ; 3.09 V              ; -0.011 V            ; 0.196 V                              ; 0.301 V                              ; 4.93e-09 s                  ; 3.56e-09 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 8.89e-09 V                  ; 3.09 V             ; -0.011 V           ; 0.196 V                             ; 0.301 V                             ; 4.93e-09 s                 ; 3.56e-09 s                 ; Yes                       ; Yes                       ;
++--------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ;
++--------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin    ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++--------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; buzzer ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 7.5e-07 V                    ; 3.08 V              ; -0.00457 V          ; 0.185 V                              ; 0.21 V                               ; 5.8e-09 s                   ; 4.46e-09 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 7.5e-07 V                   ; 3.08 V             ; -0.00457 V         ; 0.185 V                             ; 0.21 V                              ; 5.8e-09 s                  ; 4.46e-09 s                 ; Yes                       ; Yes                       ;
++--------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ;
++--------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin    ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++--------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; buzzer ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.48 V              ; -0.0173 V           ; 0.356 V                              ; 0.324 V                              ; 3.89e-09 s                  ; 3.06e-09 s                  ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.48 V             ; -0.0173 V          ; 0.356 V                             ; 0.324 V                             ; 3.89e-09 s                 ; 3.06e-09 s                 ; No                        ; No                        ;
++--------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 92670    ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 92670    ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 119   ; 119  ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; clk    ; clk   ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; key1       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst_n      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; buzzer      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; key1       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst_n      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; buzzer      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Fri Oct 15 16:53:28 2021
+Info: Command: quartus_sta music -c music
+Info: qsta_default_script.tcl version: #3
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'music.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -8.589
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -8.589            -480.848 clk 
+Info (332146): Worst-case hold slack is 0.434
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.434               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.201
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.201            -231.396 clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -7.971
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -7.971            -432.529 clk 
+Info (332146): Worst-case hold slack is 0.384
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.384               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.201
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.201            -231.396 clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.271
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.271            -135.448 clk 
+Info (332146): Worst-case hold slack is 0.179
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.179               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -177.759 clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4781 megabytes
+    Info: Processing ended: Fri Oct 15 16:53:30 2021
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

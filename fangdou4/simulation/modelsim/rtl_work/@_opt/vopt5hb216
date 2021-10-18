@@ -1,0 +1,88 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\intelFPGA_lite\17.1\project\fangdou4\simulation\modelsim
+T_opt
+V0X2]l1_HVVflmHS^30QXH0
+04 11 4 work key_test_tb fast 0
+=1-6018952d3ac1-61667656-190-3e34
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.1c;51
+vfangdoufour
+I7`A;=Pb;9]_O3MmaB2MAc2
+V@FMLB494jmi^ddE15b72f3
+Z1 dC:\intelFPGA_lite\17.1\project\fangdou4\simulation\modelsim
+w1634104882
+8C:/intelFPGA_lite/17.1/project/fangdou4/fangdoufour.v
+FC:/intelFPGA_lite/17.1/project/fangdou4/fangdoufour.v
+L0 1
+Z2 OL;L;10.1c;51
+r1
+31
+Z3 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z4 !s92 -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.1/project/fangdou4 -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 aIUJ^RME@S1C2EgE9[Kg20
+!s85 0
+!s108 1634104917.996000
+!s107 C:/intelFPGA_lite/17.1/project/fangdou4/fangdoufour.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.1/project/fangdou4|C:/intelFPGA_lite/17.1/project/fangdou4/fangdoufour.v|
+vkey_test
+Iid][QJgANFlQWeO=>aKBH1
+VU36NTmABV_d5V18gDMOza3
+R1
+w1634104583
+8C:/intelFPGA_lite/17.1/project/fangdou4/key_test.v
+FC:/intelFPGA_lite/17.1/project/fangdou4/key_test.v
+L0 31
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 mWOzNmBKKNaF1Dfho74HW2
+!s85 0
+!s108 1634104918.086000
+!s107 C:/intelFPGA_lite/17.1/project/fangdou4/key_test.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.1/project/fangdou4|C:/intelFPGA_lite/17.1/project/fangdou4/key_test.v|
+vkey_test_tb
+IZQ7DUHf2N?A<D1Dn<g0dm1
+VDVDL9lMiGQiXR@lQQGho03
+R1
+w1634104250
+8C:/intelFPGA_lite/17.1/project/fangdou4/key_test_tb.v
+FC:/intelFPGA_lite/17.1/project/fangdou4/key_test_tb.v
+L0 2
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 KF^b;C9BmQM;2eOj=ej3>1
+!s85 0
+!s108 1634104918.130000
+!s107 C:/intelFPGA_lite/17.1/project/fangdou4/key_test_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.1/project/fangdou4|C:/intelFPGA_lite/17.1/project/fangdou4/key_test_tb.v|
+vkongzhi
+Ifg:emDXJQOhQeAW7?6G6S1
+V25LgC1N>5JWKUF?kff=Gl3
+R1
+w1631937282
+8C:/intelFPGA_lite/17.1/project/fangdou4/kongzhi.v
+FC:/intelFPGA_lite/17.1/project/fangdou4/kongzhi.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 _nk:HKRJcf^6>P;:Zd=9m2
+!s85 0
+!s108 1634104918.040000
+!s107 C:/intelFPGA_lite/17.1/project/fangdou4/kongzhi.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.1/project/fangdou4|C:/intelFPGA_lite/17.1/project/fangdou4/kongzhi.v|

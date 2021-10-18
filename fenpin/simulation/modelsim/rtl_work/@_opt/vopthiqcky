@@ -1,0 +1,50 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\intelFPGA_lite\17.1\project\fenpin\simulation\modelsim
+T_opt
+Vzj?d0U8P>?FQlQ8Jk>@SH3
+04 9 4 work fenpin_tb fast 0
+=1-6018952d3ac1-616aa1b8-163-3068
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.1c;51
+vfenpin
+I=3B`dd3^K?V9`]lSe37@;2
+VWFIMh3>HTc9LVe>;eG9nR3
+Z1 dC:\intelFPGA_lite\17.1\project\fenpin\simulation\modelsim
+w1634378015
+8C:/intelFPGA_lite/17.1/project/fenpin/fenpin.v
+FC:/intelFPGA_lite/17.1/project/fenpin/fenpin.v
+L0 1
+Z2 OL;L;10.1c;51
+r1
+31
+Z3 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z4 !s92 -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.1/project/fenpin -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 X0S;@S[I_R98Q;3TZ7]JY1
+!s85 0
+!s108 1634378168.019000
+!s107 C:/intelFPGA_lite/17.1/project/fenpin/fenpin.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.1/project/fenpin|C:/intelFPGA_lite/17.1/project/fenpin/fenpin.v|
+vfenpin_tb
+IbM0@Kn9CQcC@3f>XgH=i90
+VARCG>jUVEhU5P4EPfChGz3
+R1
+w1634378064
+8C:/intelFPGA_lite/17.1/project/fenpin/fenpin_tb.v
+FC:/intelFPGA_lite/17.1/project/fenpin/fenpin_tb.v
+L0 2
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 PSZ26?cO@hDNNz3n@_lHM3
+!s85 0
+!s108 1634378168.069000
+!s107 C:/intelFPGA_lite/17.1/project/fenpin/fenpin_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.1/project/fenpin|C:/intelFPGA_lite/17.1/project/fenpin/fenpin_tb.v|

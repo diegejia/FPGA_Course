@@ -1,0 +1,22 @@
+`timescale 1ns/ns
+module key_test_tb ();
+    reg [3:0] key;
+    reg clk;
+    wire [3:0] led;
+
+    fangdoufour f1(
+        .key(key),
+        .clk(clk),
+        .led(led)
+    );
+    initial begin
+        clk = 0;
+        key = 4'b1111;
+        #5000 key = 4'b1100;
+        #5000 key = 4'b0011;
+        #5000 key = 4'b0000;
+        #5000 $stop;
+    end
+
+always@ #10 clk = ~clk;
+endmodule

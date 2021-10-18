@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, C:/intelFPGA_lite/17.1/project/DFF/DFF.v
+source_file = 1, C:/intelFPGA_lite/17.1/project/DFF/db/DFF.cbx.xml
+design_name = DFF_32
+instance = comp, \q~output , q~output, DFF_32, 1
+instance = comp, \clk~input , clk~input, DFF_32, 1
+instance = comp, \q~reg0feeder , q~reg0feeder, DFF_32, 1
+instance = comp, \rst~input , rst~input, DFF_32, 1
+instance = comp, \q~reg0 , q~reg0, DFF_32, 1
+instance = comp, \d~input , d~input, DFF_32, 1
+design_name = hard_block
+instance = comp, \~ALTERA_ASDO_DATA1~~ibuf , ~ALTERA_ASDO_DATA1~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_FLASH_nCE_nCSO~~ibuf , ~ALTERA_FLASH_nCE_nCSO~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_DATA0~~ibuf , ~ALTERA_DATA0~~ibuf, hard_block, 1

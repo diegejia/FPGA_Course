@@ -1,0 +1,279 @@
+|shumaguan2
+clk => clk.IN7
+rst_n => rst_n.IN7
+dig[0] << yimaqi:y1.out
+dig[1] << yimaqi:y1.out
+dig[2] << yimaqi:y1.out
+dig[3] << yimaqi:y1.out
+dig[4] << yimaqi:y1.out
+dig[5] << yimaqi:y1.out
+dig[6] << yimaqi:y1.out
+dig[7] << yimaqi:y1.out
+sel[0] << saomiao:s1.sel
+sel[1] << saomiao:s1.sel
+sel[2] << saomiao:s1.sel
+sel[3] << saomiao:s1.sel
+sel[4] << saomiao:s1.sel
+sel[5] << saomiao:s1.sel
+
+
+|shumaguan2|jishuqi:j1
+rst_n => j~reg0.ACLR
+rst_n => out[0]~reg0.ACLR
+rst_n => out[1]~reg0.ACLR
+rst_n => out[2]~reg0.ACLR
+rst_n => out[3]~reg0.ACLR
+clk => j~reg0.CLK
+clk => out[0]~reg0.CLK
+clk => out[1]~reg0.CLK
+clk => out[2]~reg0.CLK
+clk => out[3]~reg0.CLK
+in => j.OUTPUTSELECT
+in => out[3]~reg0.ENA
+in => out[2]~reg0.ENA
+in => out[1]~reg0.ENA
+in => out[0]~reg0.ENA
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j <= j~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shumaguan2|jishuqi:j2
+rst_n => j~reg0.ACLR
+rst_n => out[0]~reg0.ACLR
+rst_n => out[1]~reg0.ACLR
+rst_n => out[2]~reg0.ACLR
+rst_n => out[3]~reg0.ACLR
+clk => j~reg0.CLK
+clk => out[0]~reg0.CLK
+clk => out[1]~reg0.CLK
+clk => out[2]~reg0.CLK
+clk => out[3]~reg0.CLK
+in => j.OUTPUTSELECT
+in => out[3]~reg0.ENA
+in => out[2]~reg0.ENA
+in => out[1]~reg0.ENA
+in => out[0]~reg0.ENA
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j <= j~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shumaguan2|jishuqi:j3
+rst_n => j~reg0.ACLR
+rst_n => out[0]~reg0.ACLR
+rst_n => out[1]~reg0.ACLR
+rst_n => out[2]~reg0.ACLR
+rst_n => out[3]~reg0.ACLR
+clk => j~reg0.CLK
+clk => out[0]~reg0.CLK
+clk => out[1]~reg0.CLK
+clk => out[2]~reg0.CLK
+clk => out[3]~reg0.CLK
+in => j.OUTPUTSELECT
+in => out[3]~reg0.ENA
+in => out[2]~reg0.ENA
+in => out[1]~reg0.ENA
+in => out[0]~reg0.ENA
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j <= j~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shumaguan2|jishuqi:j4
+rst_n => j~reg0.ACLR
+rst_n => out[0]~reg0.ACLR
+rst_n => out[1]~reg0.ACLR
+rst_n => out[2]~reg0.ACLR
+rst_n => out[3]~reg0.ACLR
+clk => j~reg0.CLK
+clk => out[0]~reg0.CLK
+clk => out[1]~reg0.CLK
+clk => out[2]~reg0.CLK
+clk => out[3]~reg0.CLK
+in => j.OUTPUTSELECT
+in => out[3]~reg0.ENA
+in => out[2]~reg0.ENA
+in => out[1]~reg0.ENA
+in => out[0]~reg0.ENA
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j <= j~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shumaguan2|jishuqi:j5
+rst_n => j~reg0.ACLR
+rst_n => out[0]~reg0.ACLR
+rst_n => out[1]~reg0.ACLR
+rst_n => out[2]~reg0.ACLR
+rst_n => out[3]~reg0.ACLR
+clk => j~reg0.CLK
+clk => out[0]~reg0.CLK
+clk => out[1]~reg0.CLK
+clk => out[2]~reg0.CLK
+clk => out[3]~reg0.CLK
+in => j.OUTPUTSELECT
+in => out[3]~reg0.ENA
+in => out[2]~reg0.ENA
+in => out[1]~reg0.ENA
+in => out[0]~reg0.ENA
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j <= j~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shumaguan2|jishuqi:j6
+rst_n => j~reg0.ACLR
+rst_n => out[0]~reg0.ACLR
+rst_n => out[1]~reg0.ACLR
+rst_n => out[2]~reg0.ACLR
+rst_n => out[3]~reg0.ACLR
+clk => j~reg0.CLK
+clk => out[0]~reg0.CLK
+clk => out[1]~reg0.CLK
+clk => out[2]~reg0.CLK
+clk => out[3]~reg0.CLK
+in => j.OUTPUTSELECT
+in => out[3]~reg0.ENA
+in => out[2]~reg0.ENA
+in => out[1]~reg0.ENA
+in => out[0]~reg0.ENA
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j <= j~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shumaguan2|yimaqi:y1
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= <VCC>
+
+
+|shumaguan2|saomiao:s1
+clk => cnt1[0].CLK
+clk => cnt1[1].CLK
+clk => cnt1[2].CLK
+clk => cnt1[3].CLK
+clk => cnt1[4].CLK
+clk => cnt1[5].CLK
+clk => cnt1[6].CLK
+clk => cnt1[7].CLK
+clk => cnt1[8].CLK
+clk => cnt1[9].CLK
+clk => cnt1[10].CLK
+clk => cnt1[11].CLK
+clk => cnt1[12].CLK
+clk => cnt1[13].CLK
+clk => cnt1[14].CLK
+clk => cnt1[15].CLK
+clk => cnt1[16].CLK
+clk => cnt1[17].CLK
+clk => cnt1[18].CLK
+clk => cnt1[19].CLK
+clk => cnt1[20].CLK
+clk => cnt1[21].CLK
+clk => cnt1[22].CLK
+clk => cnt1[23].CLK
+clk => cnt1[24].CLK
+clk => cnt1[25].CLK
+clk => cnt1[26].CLK
+clk => cnt1[27].CLK
+clk => cnt1[28].CLK
+clk => cnt1[29].CLK
+clk => cnt1[30].CLK
+clk => cnt1[31].CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+rst_n => cnt1[0].ACLR
+rst_n => cnt1[1].ACLR
+rst_n => cnt1[2].ACLR
+rst_n => cnt1[3].ACLR
+rst_n => cnt1[4].ACLR
+rst_n => cnt1[5].ACLR
+rst_n => cnt1[6].ACLR
+rst_n => cnt1[7].ACLR
+rst_n => cnt1[8].ACLR
+rst_n => cnt1[9].ACLR
+rst_n => cnt1[10].ACLR
+rst_n => cnt1[11].ACLR
+rst_n => cnt1[12].ACLR
+rst_n => cnt1[13].ACLR
+rst_n => cnt1[14].ACLR
+rst_n => cnt1[15].ACLR
+rst_n => cnt1[16].ACLR
+rst_n => cnt1[17].ACLR
+rst_n => cnt1[18].ACLR
+rst_n => cnt1[19].ACLR
+rst_n => cnt1[20].ACLR
+rst_n => cnt1[21].ACLR
+rst_n => cnt1[22].ACLR
+rst_n => cnt1[23].ACLR
+rst_n => cnt1[24].ACLR
+rst_n => cnt1[25].ACLR
+rst_n => cnt1[26].ACLR
+rst_n => cnt1[27].ACLR
+rst_n => cnt1[28].ACLR
+rst_n => cnt1[29].ACLR
+rst_n => cnt1[30].ACLR
+rst_n => cnt1[31].ACLR
+rst_n => cnt[0].ACLR
+rst_n => cnt[1].ACLR
+rst_n => cnt[2].ACLR
+jishu_out[0] => Mux2.IN7
+jishu_out[1] => Mux1.IN7
+jishu_out[2] => Mux0.IN7
+jishu_out[3] => Mux3.IN7
+jishu_out[4] => Mux2.IN6
+jishu_out[5] => Mux1.IN6
+jishu_out[6] => Mux0.IN6
+jishu_out[7] => Mux3.IN6
+jishu_out[8] => Mux2.IN5
+jishu_out[9] => Mux1.IN5
+jishu_out[10] => Mux0.IN5
+jishu_out[11] => Mux3.IN5
+jishu_out[12] => Mux2.IN4
+jishu_out[13] => Mux1.IN4
+jishu_out[14] => Mux0.IN4
+jishu_out[15] => Mux3.IN4
+jishu_out[16] => Mux2.IN3
+jishu_out[17] => Mux1.IN3
+jishu_out[18] => Mux0.IN3
+jishu_out[19] => Mux3.IN3
+jishu_out[20] => Mux2.IN2
+jishu_out[21] => Mux1.IN2
+jishu_out[22] => Mux0.IN2
+jishu_out[23] => Mux3.IN2
+sel[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+sel[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+sel[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+sel[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+sel[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+sel[5] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+yima_in[0] <= yima_in[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+yima_in[1] <= yima_in[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+yima_in[2] <= yima_in[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+yima_in[3] <= yima_in[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

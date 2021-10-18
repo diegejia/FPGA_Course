@@ -1,0 +1,50 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\intelFPGA_lite\17.1\project\fanmaiji\simulation\modelsim
+T_opt
+VA;i5QGb1aHGjj>k789zU60
+04 11 4 work fanmaiji_tb fast 0
+=1-6018952d3ac1-61583a74-1d2-412c
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.1c;51
+vfanmaiji
+I:zlLMhh_:laa8PKnP=K_A2
+Ve;4e]CW<=5n?HTJkZ1LBa1
+Z1 dC:\intelFPGA_lite\17.1\project\fanmaiji\simulation\modelsim
+w1633172066
+8C:/intelFPGA_lite/17.1/project/fanmaiji/fanmaiji.v
+FC:/intelFPGA_lite/17.1/project/fanmaiji/fanmaiji.v
+L0 1
+Z2 OL;L;10.1c;51
+r1
+31
+Z3 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z4 !s92 -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.1/project/fanmaiji -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 OjOF1ThbKE9Vg^H09NaAg1
+!s85 0
+!s108 1633172084.128000
+!s107 C:/intelFPGA_lite/17.1/project/fanmaiji/fanmaiji.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.1/project/fanmaiji|C:/intelFPGA_lite/17.1/project/fanmaiji/fanmaiji.v|
+vfanmaiji_tb
+IFMHJ`21b`ZiXeO2kGe9SH1
+V9^^Q5Hc`fKCc>4X<==bBf2
+R1
+w1633171013
+8C:/intelFPGA_lite/17.1/project/fanmaiji/fanmaiji_tb.v
+FC:/intelFPGA_lite/17.1/project/fanmaiji/fanmaiji_tb.v
+L0 2
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 `cZGV@RaKUL:[m7UHFOcc3
+!s85 0
+!s108 1633172084.177000
+!s107 C:/intelFPGA_lite/17.1/project/fanmaiji/fanmaiji_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.1/project/fanmaiji|C:/intelFPGA_lite/17.1/project/fanmaiji/fanmaiji_tb.v|

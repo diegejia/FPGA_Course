@@ -1,0 +1,47 @@
+|fanmaiji
+drink[0] => Decoder0.IN1
+drink[0] => Mux4.IN7
+drink[1] => Decoder0.IN0
+drink[1] => Mux5.IN7
+clk => currentstate[0]~reg0.CLK
+clk => currentstate[1]~reg0.CLK
+clk => currentstate[2]~reg0.CLK
+rst => currentstate[0]~reg0.ACLR
+rst => currentstate[1]~reg0.ACLR
+rst => currentstate[2]~reg0.ACLR
+coin1 => money[0].OUTPUTSELECT
+coin1 => money[0].OUTPUTSELECT
+coin1 => money[1].OUTPUTSELECT
+coin1 => money[2].OUTPUTSELECT
+coin1 => money[2].OUTPUTSELECT
+coin2 => money[0].OUTPUTSELECT
+coin2 => money[0].OUTPUTSELECT
+coin2 => money[1].OUTPUTSELECT
+coin2 => money[1].OUTPUTSELECT
+coin2 => money[2].OUTPUTSELECT
+coin2 => money[2].IN0
+coin2 => money[2].OUTPUTSELECT
+coin2 => money[2].IN0
+coin5 => money.OUTPUTSELECT
+coin5 => money.OUTPUTSELECT
+coin5 => money.OUTPUTSELECT
+coin5 => money.OUTPUTSELECT
+coin5 => money[2].IN1
+coin5 => money[0].DATAA
+coin5 => money[2].IN1
+coin5 => money[0].DATAB
+change[0] <= change[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+change[1] <= change[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+change[2] <= change[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out <= out$latch.DB_MAX_OUTPUT_PORT_TYPE
+currentstate[0] <= currentstate[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+currentstate[1] <= currentstate[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+currentstate[2] <= currentstate[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nextstate[0] <= nextstate[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+nextstate[1] <= nextstate[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+nextstate[2] <= nextstate[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+money[0] <= money[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+money[1] <= money[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+money[2] <= money[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

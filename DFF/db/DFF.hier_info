@@ -1,0 +1,7 @@
+|DFF_32
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => ~NO_FANOUT~
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

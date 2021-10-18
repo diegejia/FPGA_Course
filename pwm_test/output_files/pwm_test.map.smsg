@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at pwm_test.v(8): object "buzzer" differs only in case from object "BUZZER" in the same scope File: C:/intelFPGA_lite/17.1/project/pwm_test/pwm_test.v Line: 8
+Warning (10268): Verilog HDL information at key_test.v(20): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/17.1/project/pwm_test/key_test.v Line: 20

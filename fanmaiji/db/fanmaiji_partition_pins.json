@@ -1,0 +1,89 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "change[0]",
+					"strict" : false
+				},
+				{
+					"name" : "change[1]",
+					"strict" : false
+				},
+				{
+					"name" : "change[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out",
+					"strict" : false
+				},
+				{
+					"name" : "currentstate[0]",
+					"strict" : false
+				},
+				{
+					"name" : "currentstate[1]",
+					"strict" : false
+				},
+				{
+					"name" : "currentstate[2]",
+					"strict" : false
+				},
+				{
+					"name" : "nextstate[0]",
+					"strict" : false
+				},
+				{
+					"name" : "nextstate[1]",
+					"strict" : false
+				},
+				{
+					"name" : "nextstate[2]",
+					"strict" : false
+				},
+				{
+					"name" : "money[0]",
+					"strict" : false
+				},
+				{
+					"name" : "money[1]",
+					"strict" : false
+				},
+				{
+					"name" : "money[2]",
+					"strict" : false
+				},
+				{
+					"name" : "drink[0]",
+					"strict" : false
+				},
+				{
+					"name" : "drink[1]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "coin1",
+					"strict" : false
+				},
+				{
+					"name" : "coin5",
+					"strict" : false
+				},
+				{
+					"name" : "coin2",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

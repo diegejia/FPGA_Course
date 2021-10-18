@@ -1,0 +1,1343 @@
+TimeQuest Timing Analyzer report for fanmaiji
+Sat Oct 02 18:51:09 2021
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'coin1'
+ 13. Slow 1200mV 85C Model Setup: 'currentstate[0]~reg0'
+ 14. Slow 1200mV 85C Model Setup: 'clk'
+ 15. Slow 1200mV 85C Model Hold: 'currentstate[0]~reg0'
+ 16. Slow 1200mV 85C Model Hold: 'clk'
+ 17. Slow 1200mV 85C Model Hold: 'coin1'
+ 18. Slow 1200mV 85C Model Recovery: 'coin1'
+ 19. Slow 1200mV 85C Model Removal: 'coin1'
+ 20. Slow 1200mV 85C Model Metastability Summary
+ 21. Slow 1200mV 0C Model Fmax Summary
+ 22. Slow 1200mV 0C Model Setup Summary
+ 23. Slow 1200mV 0C Model Hold Summary
+ 24. Slow 1200mV 0C Model Recovery Summary
+ 25. Slow 1200mV 0C Model Removal Summary
+ 26. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 27. Slow 1200mV 0C Model Setup: 'coin1'
+ 28. Slow 1200mV 0C Model Setup: 'currentstate[0]~reg0'
+ 29. Slow 1200mV 0C Model Setup: 'clk'
+ 30. Slow 1200mV 0C Model Hold: 'currentstate[0]~reg0'
+ 31. Slow 1200mV 0C Model Hold: 'clk'
+ 32. Slow 1200mV 0C Model Hold: 'coin1'
+ 33. Slow 1200mV 0C Model Recovery: 'coin1'
+ 34. Slow 1200mV 0C Model Removal: 'coin1'
+ 35. Slow 1200mV 0C Model Metastability Summary
+ 36. Fast 1200mV 0C Model Setup Summary
+ 37. Fast 1200mV 0C Model Hold Summary
+ 38. Fast 1200mV 0C Model Recovery Summary
+ 39. Fast 1200mV 0C Model Removal Summary
+ 40. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 41. Fast 1200mV 0C Model Setup: 'currentstate[0]~reg0'
+ 42. Fast 1200mV 0C Model Setup: 'coin1'
+ 43. Fast 1200mV 0C Model Setup: 'clk'
+ 44. Fast 1200mV 0C Model Hold: 'currentstate[0]~reg0'
+ 45. Fast 1200mV 0C Model Hold: 'coin1'
+ 46. Fast 1200mV 0C Model Hold: 'clk'
+ 47. Fast 1200mV 0C Model Recovery: 'coin1'
+ 48. Fast 1200mV 0C Model Removal: 'coin1'
+ 49. Fast 1200mV 0C Model Metastability Summary
+ 50. Multicorner Timing Analysis Summary
+ 51. Board Trace Model Assignments
+ 52. Input Transition Times
+ 53. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 54. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 55. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 56. Setup Transfers
+ 57. Hold Transfers
+ 58. Recovery Transfers
+ 59. Removal Transfers
+ 60. Report TCCS
+ 61. Report RSKM
+ 62. Unconstrained Paths Summary
+ 63. Clock Status Summary
+ 64. Unconstrained Input Ports
+ 65. Unconstrained Output Ports
+ 66. Unconstrained Input Ports
+ 67. Unconstrained Output Ports
+ 68. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; fanmaiji                                            ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE6F17C8                                         ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.02        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.6%      ;
+;     Processors 3-6         ;   0.3%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                     ;
++----------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------+
+; Clock Name           ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                  ;
++----------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------+
+; clk                  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                  ;
+; coin1                ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { coin1 }                ;
+; currentstate[0]~reg0 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { currentstate[0]~reg0 } ;
++----------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------+
+
+
++------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                         ;
++------------+-----------------+----------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name           ; Note ;
++------------+-----------------+----------------------+------+
+; 134.73 MHz ; 134.73 MHz      ; coin1                ;      ;
+; 144.76 MHz ; 144.76 MHz      ; currentstate[0]~reg0 ;      ;
++------------+-----------------+----------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-----------------------------------------------+
+; Slow 1200mV 85C Model Setup Summary           ;
++----------------------+--------+---------------+
+; Clock                ; Slack  ; End Point TNS ;
++----------------------+--------+---------------+
+; coin1                ; -6.624 ; -13.243       ;
+; currentstate[0]~reg0 ; -5.908 ; -29.548       ;
+; clk                  ; -0.837 ; -2.017        ;
++----------------------+--------+---------------+
+
+
++----------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary           ;
++----------------------+-------+---------------+
+; Clock                ; Slack ; End Point TNS ;
++----------------------+-------+---------------+
+; currentstate[0]~reg0 ; 0.417 ; 0.000         ;
+; clk                  ; 0.841 ; 0.000         ;
+; coin1                ; 0.916 ; 0.000         ;
++----------------------+-------+---------------+
+
+
++----------------------------------------+
+; Slow 1200mV 85C Model Recovery Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; coin1 ; -2.165 ; -4.223                ;
++-------+--------+-----------------------+
+
+
++---------------------------------------+
+; Slow 1200mV 85C Model Removal Summary ;
++-------+-------+-----------------------+
+; Clock ; Slack ; End Point TNS         ;
++-------+-------+-----------------------+
+; coin1 ; 1.094 ; 0.000                 ;
++-------+-------+-----------------------+
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++----------------------+--------+-------------------+
+; Clock                ; Slack  ; End Point TNS     ;
++----------------------+--------+-------------------+
+; clk                  ; -3.000 ; -7.461            ;
+; coin1                ; -3.000 ; -3.000            ;
+; currentstate[0]~reg0 ; 0.238  ; 0.000             ;
++----------------------+--------+-------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'coin1'                                                                                       ;
++--------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node        ; Launch Clock         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+; -6.624 ; nextstate[2]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.610      ; 6.481      ;
+; -6.619 ; nextstate[2]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.820      ; 6.583      ;
+; -6.592 ; nextstate[0]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.406      ; 6.245      ;
+; -6.587 ; nextstate[0]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.616      ; 6.347      ;
+; -6.553 ; nextstate[1]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.610      ; 6.410      ;
+; -6.548 ; nextstate[1]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.820      ; 6.512      ;
+; -3.871 ; money[1]$latch     ; money[2]$latch ; coin1                ; coin1       ; 1.000        ; 0.156      ; 3.681      ;
+; -3.211 ; coin1              ; money[1]$latch ; coin1                ; coin1       ; 0.500        ; 4.026      ; 6.494      ;
+; -3.206 ; coin1              ; money[2]$latch ; coin1                ; coin1       ; 0.500        ; 4.236      ; 6.596      ;
+; -2.903 ; money[1]$latch     ; money[1]$latch ; coin1                ; coin1       ; 1.000        ; -0.054     ; 2.606      ;
+; -2.786 ; money[2]$latch     ; money[2]$latch ; coin1                ; coin1       ; 1.000        ; -0.063     ; 2.377      ;
+; -2.682 ; coin1              ; money[1]$latch ; coin1                ; coin1       ; 1.000        ; 4.026      ; 6.465      ;
+; -2.677 ; coin1              ; money[2]$latch ; coin1                ; coin1       ; 1.000        ; 4.236      ; 6.567      ;
++--------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'currentstate[0]~reg0'                                                                                       ;
++--------+----------------------+--------------------+----------------------+----------------------+--------------+------------+------------+
+; Slack  ; From Node            ; To Node            ; Launch Clock         ; Latch Clock          ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------+--------------------+----------------------+----------------------+--------------+------------+------------+
+; -5.908 ; nextstate[2]$latch   ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; -0.056     ; 6.004      ;
+; -5.876 ; nextstate[0]$latch   ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; -0.260     ; 5.768      ;
+; -5.837 ; nextstate[1]$latch   ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; -0.056     ; 5.933      ;
+; -5.762 ; nextstate[2]$latch   ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; 0.140      ; 5.923      ;
+; -5.760 ; nextstate[2]$latch   ; change[0]$latch    ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; 0.687      ; 6.643      ;
+; -5.728 ; nextstate[0]$latch   ; change[0]$latch    ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; 0.483      ; 6.407      ;
+; -5.726 ; nextstate[0]$latch   ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; -0.064     ; 5.683      ;
+; -5.689 ; nextstate[1]$latch   ; change[0]$latch    ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; 0.687      ; 6.572      ;
+; -5.656 ; nextstate[2]$latch   ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; -0.056     ; 5.778      ;
+; -5.638 ; nextstate[1]$latch   ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; 0.140      ; 5.799      ;
+; -5.620 ; nextstate[0]$latch   ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; -0.260     ; 5.538      ;
+; -5.532 ; nextstate[1]$latch   ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; -0.056     ; 5.654      ;
+; -5.507 ; money[2]$latch       ; nextstate[1]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -1.109     ; 4.066      ;
+; -5.285 ; money[2]$latch       ; nextstate[0]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -0.913     ; 3.883      ;
+; -5.171 ; money[1]$latch       ; nextstate[0]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -0.694     ; 3.988      ;
+; -5.119 ; money[1]$latch       ; nextstate[2]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -0.890     ; 3.871      ;
+; -5.078 ; money[1]$latch       ; nextstate[1]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -0.890     ; 3.856      ;
+; -5.044 ; money[2]$latch       ; nextstate[2]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -1.109     ; 3.577      ;
+; -3.274 ; currentstate[1]~reg0 ; nextstate[0]$latch ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 1.004      ; 4.289      ;
+; -3.067 ; coin1                ; nextstate[2]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; 3.279      ; 5.988      ;
+; -2.930 ; coin1                ; nextstate[0]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; 3.475      ; 5.916      ;
+; -2.882 ; currentstate[1]~reg0 ; nextstate[1]$latch ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 0.808      ; 3.858      ;
+; -2.838 ; coin1                ; change[0]$latch    ; coin1                ; currentstate[0]~reg0 ; 0.500        ; 4.103      ; 6.627      ;
+; -2.824 ; coin1                ; nextstate[1]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; 3.279      ; 5.771      ;
+; -2.615 ; currentstate[1]~reg0 ; nextstate[2]$latch ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 0.808      ; 3.565      ;
+; -2.596 ; coin1                ; nextstate[2]$latch ; coin1                ; currentstate[0]~reg0 ; 1.000        ; 3.279      ; 6.017      ;
+; -2.510 ; currentstate[2]~reg0 ; change[0]$latch    ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 1.632      ; 4.328      ;
+; -2.467 ; money[1]$latch       ; change[1]$latch    ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -0.067     ; 2.085      ;
+; -2.466 ; coin1                ; nextstate[0]$latch ; coin1                ; currentstate[0]~reg0 ; 1.000        ; 3.475      ; 5.952      ;
+; -2.465 ; money[1]$latch       ; change[2]$latch    ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -0.066     ; 2.086      ;
+; -2.367 ; coin1                ; change[0]$latch    ; coin1                ; currentstate[0]~reg0 ; 1.000        ; 4.103      ; 6.656      ;
+; -2.360 ; coin1                ; nextstate[1]$latch ; coin1                ; currentstate[0]~reg0 ; 1.000        ; 3.279      ; 5.807      ;
+; -2.287 ; money[2]$latch       ; change[2]$latch    ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -0.285     ; 1.689      ;
+; -1.868 ; currentstate[0]~reg0 ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.500        ; 3.475      ; 5.125      ;
+; -1.689 ; currentstate[0]~reg0 ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.500        ; 3.279      ; 4.881      ;
+; -1.657 ; currentstate[2]~reg0 ; change[2]$latch    ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 1.632      ; 3.476      ;
+; -1.547 ; currentstate[2]~reg0 ; nextstate[1]$latch ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 0.808      ; 2.523      ;
+; -1.530 ; currentstate[2]~reg0 ; out$latch          ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 0.622      ; 1.999      ;
+; -1.487 ; currentstate[0]~reg0 ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; 3.475      ; 5.244      ;
+; -1.352 ; currentstate[2]~reg0 ; nextstate[0]$latch ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 1.004      ; 2.367      ;
+; -1.348 ; currentstate[2]~reg0 ; change[1]$latch    ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 1.631      ; 3.164      ;
+; -1.260 ; currentstate[0]~reg0 ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.500        ; 3.279      ; 4.478      ;
+; -1.189 ; currentstate[0]~reg0 ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; 3.279      ; 4.881      ;
+; -1.014 ; currentstate[0]~reg0 ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; 3.279      ; 4.732      ;
++--------+----------------------+--------------------+----------------------+----------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                               ;
++--------+--------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node              ; Launch Clock         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+; -0.837 ; nextstate[2]$latch ; currentstate[2]~reg0 ; currentstate[0]~reg0 ; clk         ; 1.000        ; -1.042     ; 0.786      ;
+; -0.810 ; nextstate[1]$latch ; currentstate[1]~reg0 ; currentstate[0]~reg0 ; clk         ; 1.000        ; -1.042     ; 0.759      ;
+; -0.370 ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; clk         ; 1.000        ; -1.246     ; 0.115      ;
++--------+--------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'currentstate[0]~reg0'                                                                                       ;
++-------+----------------------+--------------------+----------------------+----------------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node            ; Launch Clock         ; Latch Clock          ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+--------------------+----------------------+----------------------+--------------+------------+------------+
+; 0.417 ; currentstate[0]~reg0 ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 3.416      ; 4.094      ;
+; 0.698 ; currentstate[0]~reg0 ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 3.416      ; 4.375      ;
+; 0.773 ; currentstate[0]~reg0 ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 3.620      ; 4.654      ;
+; 0.801 ; currentstate[2]~reg0 ; nextstate[0]$latch ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 1.246      ; 2.077      ;
+; 0.905 ; currentstate[2]~reg0 ; out$latch          ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 0.891      ; 1.826      ;
+; 0.924 ; currentstate[0]~reg0 ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; -0.500       ; 3.416      ; 4.121      ;
+; 0.980 ; currentstate[2]~reg0 ; change[1]$latch    ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 1.942      ; 2.952      ;
+; 1.032 ; currentstate[0]~reg0 ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; -0.500       ; 3.416      ; 4.229      ;
+; 1.134 ; currentstate[2]~reg0 ; nextstate[1]$latch ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 1.042      ; 2.206      ;
+; 1.135 ; currentstate[0]~reg0 ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; -0.500       ; 3.620      ; 4.536      ;
+; 1.183 ; currentstate[2]~reg0 ; change[2]$latch    ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 1.944      ; 3.157      ;
+; 1.424 ; currentstate[1]~reg0 ; nextstate[1]$latch ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 1.042      ; 2.496      ;
+; 1.615 ; currentstate[1]~reg0 ; nextstate[0]$latch ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 1.246      ; 2.891      ;
+; 1.653 ; coin1                ; change[0]$latch    ; coin1                ; currentstate[0]~reg0 ; 0.000        ; 4.318      ; 6.001      ;
+; 1.695 ; coin1                ; nextstate[1]$latch ; coin1                ; currentstate[0]~reg0 ; 0.000        ; 3.416      ; 5.141      ;
+; 1.784 ; coin1                ; nextstate[0]$latch ; coin1                ; currentstate[0]~reg0 ; 0.000        ; 3.620      ; 5.434      ;
+; 1.815 ; money[2]$latch       ; change[2]$latch    ; coin1                ; currentstate[0]~reg0 ; -0.500       ; 0.082      ; 1.427      ;
+; 1.882 ; currentstate[2]~reg0 ; change[0]$latch    ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 1.944      ; 3.856      ;
+; 1.938 ; coin1                ; nextstate[2]$latch ; coin1                ; currentstate[0]~reg0 ; 0.000        ; 3.416      ; 5.384      ;
+; 1.996 ; money[1]$latch       ; change[2]$latch    ; coin1                ; currentstate[0]~reg0 ; -0.500       ; 0.292      ; 1.818      ;
+; 1.999 ; money[1]$latch       ; change[1]$latch    ; coin1                ; currentstate[0]~reg0 ; -0.500       ; 0.290      ; 1.819      ;
+; 2.042 ; currentstate[1]~reg0 ; nextstate[2]$latch ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 1.042      ; 3.114      ;
+; 2.119 ; coin1                ; change[0]$latch    ; coin1                ; currentstate[0]~reg0 ; -0.500       ; 4.318      ; 5.967      ;
+; 2.169 ; coin1                ; nextstate[1]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; 3.416      ; 5.115      ;
+; 2.258 ; coin1                ; nextstate[0]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; 3.620      ; 5.408      ;
+; 2.404 ; coin1                ; nextstate[2]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; 3.416      ; 5.350      ;
+; 3.565 ; money[2]$latch       ; nextstate[2]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; -0.820     ; 2.275      ;
+; 3.985 ; money[1]$latch       ; nextstate[0]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; -0.406     ; 3.109      ;
+; 4.077 ; money[2]$latch       ; nextstate[0]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; -0.616     ; 2.991      ;
+; 4.266 ; money[1]$latch       ; nextstate[1]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; -0.610     ; 3.186      ;
+; 4.356 ; money[2]$latch       ; nextstate[1]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; -0.820     ; 3.066      ;
+; 4.460 ; money[1]$latch       ; nextstate[2]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; -0.610     ; 3.380      ;
+; 4.788 ; nextstate[1]$latch   ; change[0]$latch    ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 1.039      ; 5.827      ;
+; 4.870 ; nextstate[2]$latch   ; change[0]$latch    ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 1.039      ; 5.909      ;
+; 4.871 ; nextstate[0]$latch   ; change[0]$latch    ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.843      ; 5.714      ;
+; 4.979 ; nextstate[1]$latch   ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.056      ; 5.035      ;
+; 5.017 ; nextstate[0]$latch   ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; -0.140     ; 4.877      ;
+; 5.040 ; nextstate[2]$latch   ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.056      ; 5.096      ;
+; 5.068 ; nextstate[1]$latch   ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.260      ; 5.328      ;
+; 5.106 ; nextstate[0]$latch   ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.064      ; 5.170      ;
+; 5.129 ; nextstate[2]$latch   ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.260      ; 5.389      ;
+; 5.154 ; nextstate[1]$latch   ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.056      ; 5.210      ;
+; 5.236 ; nextstate[2]$latch   ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.056      ; 5.292      ;
+; 5.237 ; nextstate[0]$latch   ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; -0.140     ; 5.097      ;
++-------+----------------------+--------------------+----------------------+----------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                               ;
++-------+--------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node              ; Launch Clock         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+; 0.841 ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; clk         ; 0.000        ; -1.004     ; 0.079      ;
+; 1.275 ; nextstate[1]$latch ; currentstate[1]~reg0 ; currentstate[0]~reg0 ; clk         ; 0.000        ; -0.808     ; 0.709      ;
+; 1.299 ; nextstate[2]$latch ; currentstate[2]~reg0 ; currentstate[0]~reg0 ; clk         ; 0.000        ; -0.808     ; 0.733      ;
++-------+--------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'coin1'                                                                                       ;
++-------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node        ; Launch Clock         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+; 0.916 ; coin1              ; money[2]$latch ; coin1                ; coin1       ; 0.000        ; 4.388      ; 5.304      ;
+; 1.103 ; coin1              ; money[1]$latch ; coin1                ; coin1       ; 0.000        ; 4.169      ; 5.272      ;
+; 1.559 ; coin1              ; money[2]$latch ; coin1                ; coin1       ; -0.500       ; 4.388      ; 5.467      ;
+; 1.846 ; coin1              ; money[1]$latch ; coin1                ; coin1       ; -0.500       ; 4.169      ; 5.535      ;
+; 1.944 ; money[2]$latch     ; money[2]$latch ; coin1                ; coin1       ; 0.000        ; 0.063      ; 2.007      ;
+; 2.298 ; money[1]$latch     ; money[1]$latch ; coin1                ; coin1       ; 0.000        ; 0.054      ; 2.352      ;
+; 2.801 ; money[1]$latch     ; money[2]$latch ; coin1                ; coin1       ; 0.000        ; 0.273      ; 3.074      ;
+; 4.941 ; nextstate[1]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.890      ; 5.361      ;
+; 4.946 ; nextstate[1]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 1.109      ; 5.585      ;
+; 5.023 ; nextstate[2]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.890      ; 5.443      ;
+; 5.024 ; nextstate[0]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.694      ; 5.248      ;
+; 5.028 ; nextstate[2]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 1.109      ; 5.667      ;
+; 5.029 ; nextstate[0]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.913      ; 5.472      ;
++-------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Recovery: 'coin1'                                                                                    ;
++--------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node        ; Launch Clock         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+; -2.165 ; nextstate[2]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.610      ; 2.022      ;
+; -2.133 ; nextstate[0]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.406      ; 1.786      ;
+; -2.094 ; nextstate[1]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.610      ; 1.951      ;
+; -2.058 ; nextstate[2]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.820      ; 2.022      ;
+; -2.026 ; nextstate[0]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.616      ; 1.786      ;
+; -1.987 ; nextstate[1]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.820      ; 1.951      ;
++--------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Removal: 'coin1'                                                                                    ;
++-------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node        ; Launch Clock         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+; 1.094 ; nextstate[1]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 1.109      ; 1.733      ;
+; 1.175 ; nextstate[0]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.913      ; 1.618      ;
+; 1.176 ; nextstate[2]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 1.109      ; 1.815      ;
+; 1.313 ; nextstate[1]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.890      ; 1.733      ;
+; 1.394 ; nextstate[0]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.694      ; 1.618      ;
+; 1.395 ; nextstate[2]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.890      ; 1.815      ;
++-------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                          ;
++------------+-----------------+----------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name           ; Note ;
++------------+-----------------+----------------------+------+
+; 129.84 MHz ; 129.84 MHz      ; coin1                ;      ;
+; 152.05 MHz ; 152.05 MHz      ; currentstate[0]~reg0 ;      ;
++------------+-----------------+----------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary            ;
++----------------------+--------+---------------+
+; Clock                ; Slack  ; End Point TNS ;
++----------------------+--------+---------------+
+; coin1                ; -6.376 ; -12.746       ;
+; currentstate[0]~reg0 ; -5.577 ; -27.754       ;
+; clk                  ; -0.527 ; -1.121        ;
++----------------------+--------+---------------+
+
+
++----------------------------------------------+
+; Slow 1200mV 0C Model Hold Summary            ;
++----------------------+-------+---------------+
+; Clock                ; Slack ; End Point TNS ;
++----------------------+-------+---------------+
+; currentstate[0]~reg0 ; 0.468 ; 0.000         ;
+; clk                  ; 0.606 ; 0.000         ;
+; coin1                ; 0.786 ; 0.000         ;
++----------------------+-------+---------------+
+
+
++---------------------------------------+
+; Slow 1200mV 0C Model Recovery Summary ;
++-------+--------+----------------------+
+; Clock ; Slack  ; End Point TNS        ;
++-------+--------+----------------------+
+; coin1 ; -1.993 ; -3.882               ;
++-------+--------+----------------------+
+
+
++--------------------------------------+
+; Slow 1200mV 0C Model Removal Summary ;
++-------+-------+----------------------+
+; Clock ; Slack ; End Point TNS        ;
++-------+-------+----------------------+
+; coin1 ; 1.067 ; 0.000                ;
++-------+-------+----------------------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++----------------------+--------+------------------+
+; Clock                ; Slack  ; End Point TNS    ;
++----------------------+--------+------------------+
+; clk                  ; -3.000 ; -7.461           ;
+; coin1                ; -3.000 ; -3.000           ;
+; currentstate[0]~reg0 ; 0.127  ; 0.000            ;
++----------------------+--------+------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'coin1'                                                                                        ;
++--------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node        ; Launch Clock         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+; -6.376 ; nextstate[2]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.753      ; 6.347      ;
+; -6.370 ; nextstate[2]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.561      ; 6.237      ;
+; -6.347 ; nextstate[0]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.569      ; 6.134      ;
+; -6.341 ; nextstate[0]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.377      ; 6.024      ;
+; -6.331 ; nextstate[1]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.753      ; 6.302      ;
+; -6.325 ; nextstate[1]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.561      ; 6.192      ;
+; -3.685 ; money[1]$latch     ; money[2]$latch ; coin1                ; coin1       ; 1.000        ; 0.145      ; 3.558      ;
+; -3.351 ; coin1              ; money[2]$latch ; coin1                ; coin1       ; 0.500        ; 3.825      ; 6.404      ;
+; -3.345 ; coin1              ; money[1]$latch ; coin1                ; coin1       ; 0.500        ; 3.633      ; 6.294      ;
+; -2.747 ; coin1              ; money[2]$latch ; coin1                ; coin1       ; 1.000        ; 3.825      ; 6.300      ;
+; -2.747 ; money[1]$latch     ; money[1]$latch ; coin1                ; coin1       ; 1.000        ; -0.047     ; 2.516      ;
+; -2.741 ; coin1              ; money[1]$latch ; coin1                ; coin1       ; 1.000        ; 3.633      ; 6.190      ;
+; -2.596 ; money[2]$latch     ; money[2]$latch ; coin1                ; coin1       ; 1.000        ; -0.054     ; 2.270      ;
++--------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'currentstate[0]~reg0'                                                                                        ;
++--------+----------------------+--------------------+----------------------+----------------------+--------------+------------+------------+
+; Slack  ; From Node            ; To Node            ; Launch Clock         ; Latch Clock          ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------+--------------------+----------------------+----------------------+--------------+------------+------------+
+; -5.577 ; nextstate[2]$latch   ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; -0.049     ; 5.742      ;
+; -5.548 ; nextstate[0]$latch   ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; -0.233     ; 5.529      ;
+; -5.532 ; nextstate[1]$latch   ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; -0.049     ; 5.697      ;
+; -5.457 ; nextstate[2]$latch   ; change[0]$latch    ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; 0.637      ; 6.346      ;
+; -5.428 ; nextstate[0]$latch   ; change[0]$latch    ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; 0.453      ; 6.133      ;
+; -5.412 ; nextstate[1]$latch   ; change[0]$latch    ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; 0.637      ; 6.301      ;
+; -5.328 ; nextstate[2]$latch   ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; 0.129      ; 5.520      ;
+; -5.300 ; nextstate[0]$latch   ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; -0.055     ; 5.308      ;
+; -5.219 ; nextstate[2]$latch   ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; -0.049     ; 5.406      ;
+; -5.218 ; nextstate[1]$latch   ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; 0.129      ; 5.410      ;
+; -5.191 ; nextstate[0]$latch   ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; -0.233     ; 5.194      ;
+; -5.142 ; money[2]$latch       ; nextstate[1]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -1.009     ; 3.859      ;
+; -5.109 ; nextstate[1]$latch   ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; -0.049     ; 5.296      ;
+; -4.969 ; money[2]$latch       ; nextstate[0]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -0.831     ; 3.691      ;
+; -4.870 ; money[1]$latch       ; nextstate[0]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -0.632     ; 3.791      ;
+; -4.854 ; money[1]$latch       ; nextstate[2]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -0.810     ; 3.748      ;
+; -4.776 ; money[2]$latch       ; nextstate[2]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -1.009     ; 3.471      ;
+; -4.772 ; money[1]$latch       ; nextstate[1]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -0.810     ; 3.688      ;
+; -3.275 ; currentstate[1]~reg0 ; nextstate[0]$latch ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 0.761      ; 4.089      ;
+; -3.042 ; coin1                ; nextstate[2]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; 2.949      ; 5.695      ;
+; -2.884 ; currentstate[1]~reg0 ; nextstate[1]$latch ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 0.583      ; 3.693      ;
+; -2.850 ; coin1                ; nextstate[0]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; 3.127      ; 5.530      ;
+; -2.848 ; coin1                ; change[0]$latch    ; coin1                ; currentstate[0]~reg0 ; 0.500        ; 3.709      ; 6.299      ;
+; -2.741 ; coin1                ; nextstate[1]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; 2.949      ; 5.416      ;
+; -2.646 ; coin1                ; nextstate[2]$latch ; coin1                ; currentstate[0]~reg0 ; 1.000        ; 2.949      ; 5.799      ;
+; -2.633 ; currentstate[1]~reg0 ; nextstate[2]$latch ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 0.583      ; 3.420      ;
+; -2.584 ; currentstate[2]~reg0 ; change[0]$latch    ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 1.343      ; 4.169      ;
+; -2.460 ; coin1                ; nextstate[0]$latch ; coin1                ; currentstate[0]~reg0 ; 1.000        ; 3.127      ; 5.640      ;
+; -2.452 ; coin1                ; change[0]$latch    ; coin1                ; currentstate[0]~reg0 ; 1.000        ; 3.709      ; 6.403      ;
+; -2.351 ; coin1                ; nextstate[1]$latch ; coin1                ; currentstate[0]~reg0 ; 1.000        ; 2.949      ; 5.526      ;
+; -2.316 ; money[1]$latch       ; change[1]$latch    ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -0.051     ; 2.007      ;
+; -2.315 ; money[1]$latch       ; change[2]$latch    ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -0.050     ; 2.009      ;
+; -2.112 ; money[2]$latch       ; change[2]$latch    ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -0.249     ; 1.607      ;
+; -1.878 ; currentstate[0]~reg0 ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.500        ; 3.127      ; 4.808      ;
+; -1.696 ; currentstate[0]~reg0 ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.500        ; 2.949      ; 4.599      ;
+; -1.628 ; currentstate[2]~reg0 ; change[2]$latch    ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 1.343      ; 3.215      ;
+; -1.620 ; currentstate[0]~reg0 ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; 3.127      ; 5.050      ;
+; -1.547 ; currentstate[2]~reg0 ; nextstate[1]$latch ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 0.583      ; 2.356      ;
+; -1.542 ; currentstate[2]~reg0 ; out$latch          ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 0.443      ; 1.921      ;
+; -1.411 ; currentstate[2]~reg0 ; nextstate[0]$latch ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 0.761      ; 2.225      ;
+; -1.347 ; currentstate[2]~reg0 ; change[1]$latch    ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 1.342      ; 2.931      ;
+; -1.291 ; currentstate[0]~reg0 ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; 2.949      ; 4.694      ;
+; -1.257 ; currentstate[0]~reg0 ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.500        ; 2.949      ; 4.182      ;
+; -1.124 ; currentstate[0]~reg0 ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; 2.949      ; 4.549      ;
++--------+----------------------+--------------------+----------------------+----------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                                ;
++--------+--------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node              ; Launch Clock         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+; -0.527 ; nextstate[2]$latch ; currentstate[2]~reg0 ; currentstate[0]~reg0 ; clk         ; 1.000        ; -0.797     ; 0.722      ;
+; -0.504 ; nextstate[1]$latch ; currentstate[1]~reg0 ; currentstate[0]~reg0 ; clk         ; 1.000        ; -0.797     ; 0.699      ;
+; -0.090 ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; clk         ; 1.000        ; -0.981     ; 0.101      ;
++--------+--------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'currentstate[0]~reg0'                                                                                        ;
++-------+----------------------+--------------------+----------------------+----------------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node            ; Launch Clock         ; Latch Clock          ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+--------------------+----------------------+----------------------+--------------+------------+------------+
+; 0.468 ; currentstate[0]~reg0 ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 3.072      ; 3.780      ;
+; 0.696 ; currentstate[0]~reg0 ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 3.072      ; 4.008      ;
+; 0.787 ; currentstate[0]~reg0 ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 3.256      ; 4.283      ;
+; 0.857 ; currentstate[0]~reg0 ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; -0.500       ; 3.072      ; 3.689      ;
+; 0.897 ; currentstate[2]~reg0 ; nextstate[0]$latch ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 0.981      ; 1.908      ;
+; 0.926 ; currentstate[2]~reg0 ; out$latch          ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 0.682      ; 1.638      ;
+; 0.980 ; currentstate[0]~reg0 ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; -0.500       ; 3.072      ; 3.812      ;
+; 1.042 ; currentstate[0]~reg0 ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; -0.500       ; 3.256      ; 4.058      ;
+; 1.100 ; currentstate[2]~reg0 ; change[1]$latch    ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 1.618      ; 2.748      ;
+; 1.204 ; currentstate[2]~reg0 ; nextstate[1]$latch ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 0.797      ; 2.031      ;
+; 1.283 ; currentstate[2]~reg0 ; change[2]$latch    ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 1.619      ; 2.932      ;
+; 1.407 ; currentstate[1]~reg0 ; nextstate[1]$latch ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 0.797      ; 2.234      ;
+; 1.553 ; coin1                ; change[0]$latch    ; coin1                ; currentstate[0]~reg0 ; 0.000        ; 3.894      ; 5.477      ;
+; 1.676 ; money[2]$latch       ; change[2]$latch    ; coin1                ; currentstate[0]~reg0 ; -0.500       ; 0.069      ; 1.275      ;
+; 1.680 ; coin1                ; nextstate[1]$latch ; coin1                ; currentstate[0]~reg0 ; 0.000        ; 3.072      ; 4.782      ;
+; 1.688 ; currentstate[1]~reg0 ; nextstate[0]$latch ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 0.981      ; 2.699      ;
+; 1.759 ; coin1                ; nextstate[0]$latch ; coin1                ; currentstate[0]~reg0 ; 0.000        ; 3.256      ; 5.045      ;
+; 1.798 ; currentstate[2]~reg0 ; change[0]$latch    ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 1.619      ; 3.447      ;
+; 1.816 ; coin1                ; nextstate[2]$latch ; coin1                ; currentstate[0]~reg0 ; 0.000        ; 3.072      ; 4.918      ;
+; 1.829 ; money[1]$latch       ; change[2]$latch    ; coin1                ; currentstate[0]~reg0 ; -0.500       ; 0.261      ; 1.620      ;
+; 1.832 ; money[1]$latch       ; change[1]$latch    ; coin1                ; currentstate[0]~reg0 ; -0.500       ; 0.260      ; 1.622      ;
+; 1.948 ; coin1                ; change[0]$latch    ; coin1                ; currentstate[0]~reg0 ; -0.500       ; 3.894      ; 5.372      ;
+; 1.950 ; currentstate[1]~reg0 ; nextstate[2]$latch ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 0.797      ; 2.777      ;
+; 2.080 ; coin1                ; nextstate[1]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; 3.072      ; 4.682      ;
+; 2.159 ; coin1                ; nextstate[0]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; 3.256      ; 4.945      ;
+; 2.211 ; coin1                ; nextstate[2]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; 3.072      ; 4.813      ;
+; 3.245 ; money[2]$latch       ; nextstate[2]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; -0.753     ; 2.022      ;
+; 3.660 ; money[1]$latch       ; nextstate[0]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; -0.377     ; 2.813      ;
+; 3.738 ; money[2]$latch       ; nextstate[0]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; -0.569     ; 2.699      ;
+; 3.920 ; money[1]$latch       ; nextstate[1]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; -0.561     ; 2.889      ;
+; 3.997 ; money[2]$latch       ; nextstate[1]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; -0.753     ; 2.774      ;
+; 4.040 ; money[1]$latch       ; nextstate[2]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; -0.561     ; 3.009      ;
+; 4.284 ; nextstate[1]$latch   ; change[0]$latch    ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.945      ; 5.229      ;
+; 4.358 ; nextstate[2]$latch   ; change[0]$latch    ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.945      ; 5.303      ;
+; 4.365 ; nextstate[0]$latch   ; change[0]$latch    ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.767      ; 5.132      ;
+; 4.609 ; nextstate[1]$latch   ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.049      ; 4.658      ;
+; 4.621 ; nextstate[1]$latch   ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.049      ; 4.670      ;
+; 4.625 ; nextstate[0]$latch   ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; -0.129     ; 4.496      ;
+; 4.650 ; nextstate[2]$latch   ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.049      ; 4.699      ;
+; 4.688 ; nextstate[1]$latch   ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.233      ; 4.921      ;
+; 4.695 ; nextstate[2]$latch   ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.049      ; 4.744      ;
+; 4.702 ; nextstate[0]$latch   ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; -0.129     ; 4.573      ;
+; 4.704 ; nextstate[0]$latch   ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.055      ; 4.759      ;
+; 4.729 ; nextstate[2]$latch   ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.233      ; 4.962      ;
++-------+----------------------+--------------------+----------------------+----------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                                ;
++-------+--------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node              ; Launch Clock         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+; 0.606 ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; clk         ; 0.000        ; -0.761     ; 0.070      ;
+; 1.012 ; nextstate[1]$latch ; currentstate[1]~reg0 ; currentstate[0]~reg0 ; clk         ; 0.000        ; -0.583     ; 0.654      ;
+; 1.034 ; nextstate[2]$latch ; currentstate[2]~reg0 ; currentstate[0]~reg0 ; clk         ; 0.000        ; -0.583     ; 0.676      ;
++-------+--------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'coin1'                                                                                        ;
++-------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node        ; Launch Clock         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+; 0.786 ; coin1              ; money[2]$latch ; coin1                ; coin1       ; 0.000        ; 3.958      ; 4.744      ;
+; 0.976 ; coin1              ; money[1]$latch ; coin1                ; coin1       ; 0.000        ; 3.759      ; 4.735      ;
+; 1.568 ; coin1              ; money[2]$latch ; coin1                ; coin1       ; -0.500       ; 3.958      ; 5.046      ;
+; 1.728 ; money[2]$latch     ; money[2]$latch ; coin1                ; coin1       ; 0.000        ; 0.054      ; 1.782      ;
+; 1.782 ; coin1              ; money[1]$latch ; coin1                ; coin1       ; -0.500       ; 3.759      ; 5.061      ;
+; 2.060 ; money[1]$latch     ; money[1]$latch ; coin1                ; coin1       ; 0.000        ; 0.047      ; 2.107      ;
+; 2.476 ; money[1]$latch     ; money[2]$latch ; coin1                ; coin1       ; 0.000        ; 0.246      ; 2.722      ;
+; 4.435 ; nextstate[1]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 1.009      ; 4.974      ;
+; 4.473 ; nextstate[1]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.810      ; 4.813      ;
+; 4.509 ; nextstate[2]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 1.009      ; 5.048      ;
+; 4.516 ; nextstate[0]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.831      ; 4.877      ;
+; 4.547 ; nextstate[2]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.810      ; 4.887      ;
+; 4.554 ; nextstate[0]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.632      ; 4.716      ;
++-------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Recovery: 'coin1'                                                                                     ;
++--------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node        ; Launch Clock         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+; -1.993 ; nextstate[2]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.561      ; 1.860      ;
+; -1.964 ; nextstate[0]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.377      ; 1.647      ;
+; -1.948 ; nextstate[1]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.561      ; 1.815      ;
+; -1.889 ; nextstate[2]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.753      ; 1.860      ;
+; -1.860 ; nextstate[0]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.569      ; 1.647      ;
+; -1.844 ; nextstate[1]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.753      ; 1.815      ;
++--------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Removal: 'coin1'                                                                                     ;
++-------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node        ; Launch Clock         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+; 1.067 ; nextstate[1]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 1.009      ; 1.606      ;
+; 1.136 ; nextstate[0]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.831      ; 1.497      ;
+; 1.141 ; nextstate[2]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 1.009      ; 1.680      ;
+; 1.266 ; nextstate[1]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.810      ; 1.606      ;
+; 1.336 ; nextstate[0]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.632      ; 1.498      ;
+; 1.340 ; nextstate[2]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.810      ; 1.680      ;
++-------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------+
+; Fast 1200mV 0C Model Setup Summary            ;
++----------------------+--------+---------------+
+; Clock                ; Slack  ; End Point TNS ;
++----------------------+--------+---------------+
+; currentstate[0]~reg0 ; -2.362 ; -11.244       ;
+; coin1                ; -2.181 ; -4.354        ;
+; clk                  ; 0.025  ; 0.000         ;
++----------------------+--------+---------------+
+
+
++----------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary            ;
++----------------------+-------+---------------+
+; Clock                ; Slack ; End Point TNS ;
++----------------------+-------+---------------+
+; currentstate[0]~reg0 ; 0.043 ; 0.000         ;
+; coin1                ; 0.356 ; 0.000         ;
+; clk                  ; 0.524 ; 0.000         ;
++----------------------+-------+---------------+
+
+
++---------------------------------------+
+; Fast 1200mV 0C Model Recovery Summary ;
++-------+--------+----------------------+
+; Clock ; Slack  ; End Point TNS        ;
++-------+--------+----------------------+
+; coin1 ; -0.288 ; -0.526               ;
++-------+--------+----------------------+
+
+
++--------------------------------------+
+; Fast 1200mV 0C Model Removal Summary ;
++-------+-------+----------------------+
+; Clock ; Slack ; End Point TNS        ;
++-------+-------+----------------------+
+; coin1 ; 0.353 ; 0.000                ;
++-------+-------+----------------------+
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++----------------------+--------+------------------+
+; Clock                ; Slack  ; End Point TNS    ;
++----------------------+--------+------------------+
+; clk                  ; -3.000 ; -6.303           ;
+; coin1                ; -3.000 ; -3.000           ;
+; currentstate[0]~reg0 ; 0.433  ; 0.000            ;
++----------------------+--------+------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'currentstate[0]~reg0'                                                                                        ;
++--------+----------------------+--------------------+----------------------+----------------------+--------------+------------+------------+
+; Slack  ; From Node            ; To Node            ; Launch Clock         ; Latch Clock          ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------+--------------------+----------------------+----------------------+--------------+------------+------------+
+; -2.362 ; money[2]$latch       ; nextstate[1]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -0.841     ; 1.659      ;
+; -2.298 ; money[2]$latch       ; nextstate[0]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -0.761     ; 1.609      ;
+; -2.285 ; money[1]$latch       ; nextstate[2]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -0.750     ; 1.660      ;
+; -2.256 ; money[1]$latch       ; nextstate[0]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -0.670     ; 1.658      ;
+; -2.224 ; money[2]$latch       ; nextstate[2]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -0.841     ; 1.508      ;
+; -2.192 ; money[1]$latch       ; nextstate[1]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -0.750     ; 1.580      ;
+; -2.024 ; nextstate[2]$latch   ; change[0]$latch    ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; 0.292      ; 2.977      ;
+; -2.007 ; nextstate[2]$latch   ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; -0.025     ; 2.617      ;
+; -1.988 ; nextstate[0]$latch   ; change[0]$latch    ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; 0.209      ; 2.858      ;
+; -1.973 ; nextstate[1]$latch   ; change[0]$latch    ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; 0.292      ; 2.926      ;
+; -1.971 ; nextstate[0]$latch   ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; -0.108     ; 2.498      ;
+; -1.956 ; nextstate[1]$latch   ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; -0.025     ; 2.566      ;
+; -1.818 ; nextstate[2]$latch   ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; 0.055      ; 2.455      ;
+; -1.795 ; nextstate[0]$latch   ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; -0.028     ; 2.349      ;
+; -1.768 ; nextstate[1]$latch   ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; 0.055      ; 2.405      ;
+; -1.760 ; nextstate[2]$latch   ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; -0.025     ; 2.383      ;
+; -1.737 ; nextstate[0]$latch   ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; -0.108     ; 2.277      ;
+; -1.710 ; nextstate[1]$latch   ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; -0.025     ; 2.333      ;
+; -1.323 ; coin1                ; nextstate[2]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; 1.520      ; 2.968      ;
+; -1.302 ; coin1                ; change[0]$latch    ; coin1                ; currentstate[0]~reg0 ; 0.500        ; 1.875      ; 3.328      ;
+; -1.171 ; coin1                ; nextstate[0]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; 1.600      ; 2.843      ;
+; -1.138 ; money[1]$latch       ; change[1]$latch    ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -0.396     ; 0.892      ;
+; -1.137 ; money[1]$latch       ; change[2]$latch    ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -0.395     ; 0.893      ;
+; -1.113 ; coin1                ; nextstate[1]$latch ; coin1                ; currentstate[0]~reg0 ; 0.500        ; 1.520      ; 2.771      ;
+; -1.048 ; money[2]$latch       ; change[2]$latch    ; coin1                ; currentstate[0]~reg0 ; 0.500        ; -0.486     ; 0.713      ;
+; -0.671 ; currentstate[1]~reg0 ; nextstate[0]$latch ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 0.607      ; 1.850      ;
+; -0.508 ; currentstate[1]~reg0 ; nextstate[1]$latch ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 0.527      ; 1.673      ;
+; -0.501 ; currentstate[0]~reg0 ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.500        ; 1.600      ; 2.288      ;
+; -0.438 ; currentstate[2]~reg0 ; change[0]$latch    ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 0.882      ; 1.971      ;
+; -0.425 ; coin1                ; nextstate[2]$latch ; coin1                ; currentstate[0]~reg0 ; 1.000        ; 1.520      ; 2.570      ;
+; -0.404 ; coin1                ; change[0]$latch    ; coin1                ; currentstate[0]~reg0 ; 1.000        ; 1.875      ; 2.930      ;
+; -0.376 ; currentstate[0]~reg0 ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.500        ; 1.520      ; 2.136      ;
+; -0.364 ; currentstate[0]~reg0 ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.500        ; 1.520      ; 2.137      ;
+; -0.346 ; currentstate[1]~reg0 ; nextstate[2]$latch ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 0.527      ; 1.498      ;
+; -0.266 ; coin1                ; nextstate[0]$latch ; coin1                ; currentstate[0]~reg0 ; 1.000        ; 1.600      ; 2.438      ;
+; -0.208 ; coin1                ; nextstate[1]$latch ; coin1                ; currentstate[0]~reg0 ; 1.000        ; 1.520      ; 2.366      ;
+; -0.001 ; currentstate[2]~reg0 ; change[2]$latch    ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 0.882      ; 1.534      ;
+; 0.065  ; currentstate[2]~reg0 ; out$latch          ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 0.472      ; 0.895      ;
+; 0.129  ; currentstate[2]~reg0 ; nextstate[1]$latch ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 0.527      ; 1.036      ;
+; 0.142  ; currentstate[2]~reg0 ; change[1]$latch    ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 0.881      ; 1.389      ;
+; 0.168  ; currentstate[0]~reg0 ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; 1.600      ; 2.119      ;
+; 0.225  ; currentstate[2]~reg0 ; nextstate[0]$latch ; clk                  ; currentstate[0]~reg0 ; 1.000        ; 0.607      ; 0.954      ;
+; 0.229  ; currentstate[0]~reg0 ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; 1.520      ; 2.031      ;
+; 0.372  ; currentstate[0]~reg0 ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 1.000        ; 1.520      ; 1.901      ;
++--------+----------------------+--------------------+----------------------+----------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'coin1'                                                                                        ;
++--------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node        ; Launch Clock         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+; -2.181 ; nextstate[2]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.622      ; 2.747      ;
+; -2.173 ; nextstate[2]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.708      ; 2.789      ;
+; -2.145 ; nextstate[0]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.539      ; 2.628      ;
+; -2.137 ; nextstate[0]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.625      ; 2.670      ;
+; -2.130 ; nextstate[1]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.622      ; 2.696      ;
+; -2.122 ; nextstate[1]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.708      ; 2.738      ;
+; -1.074 ; money[1]$latch     ; money[2]$latch ; coin1                ; coin1       ; 1.000        ; 0.062      ; 1.554      ;
+; -0.712 ; money[1]$latch     ; money[1]$latch ; coin1                ; coin1       ; 1.000        ; -0.024     ; 1.142      ;
+; -0.614 ; money[2]$latch     ; money[2]$latch ; coin1                ; coin1       ; 1.000        ; -0.029     ; 1.003      ;
+; -0.541 ; coin1              ; money[1]$latch ; coin1                ; coin1       ; 0.500        ; 2.205      ; 2.700      ;
+; -0.533 ; coin1              ; money[2]$latch ; coin1                ; coin1       ; 0.500        ; 2.291      ; 2.742      ;
+; -0.439 ; coin1              ; money[1]$latch ; coin1                ; coin1       ; 1.000        ; 2.205      ; 3.098      ;
+; -0.431 ; coin1              ; money[2]$latch ; coin1                ; coin1       ; 1.000        ; 2.291      ; 3.140      ;
++--------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                                               ;
++-------+--------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node              ; Launch Clock         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+; 0.025 ; nextstate[2]$latch ; currentstate[2]~reg0 ; currentstate[0]~reg0 ; clk         ; 1.000        ; -0.633     ; 0.319      ;
+; 0.038 ; nextstate[1]$latch ; currentstate[1]~reg0 ; currentstate[0]~reg0 ; clk         ; 1.000        ; -0.633     ; 0.306      ;
+; 0.211 ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; clk         ; 1.000        ; -0.716     ; 0.050      ;
++-------+--------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'currentstate[0]~reg0'                                                                                        ;
++-------+----------------------+--------------------+----------------------+----------------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node            ; Launch Clock         ; Latch Clock          ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+--------------------+----------------------+----------------------+--------------+------------+------------+
+; 0.043 ; currentstate[0]~reg0 ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 1.583      ; 1.731      ;
+; 0.082 ; currentstate[0]~reg0 ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 1.583      ; 1.770      ;
+; 0.129 ; currentstate[2]~reg0 ; nextstate[0]$latch ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 0.716      ; 0.875      ;
+; 0.136 ; currentstate[2]~reg0 ; out$latch          ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 0.597      ; 0.763      ;
+; 0.141 ; currentstate[0]~reg0 ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 1.666      ; 1.912      ;
+; 0.179 ; currentstate[2]~reg0 ; change[1]$latch    ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 1.023      ; 1.232      ;
+; 0.263 ; currentstate[2]~reg0 ; nextstate[1]$latch ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 0.633      ; 0.926      ;
+; 0.271 ; currentstate[2]~reg0 ; change[2]$latch    ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 1.024      ; 1.325      ;
+; 0.415 ; currentstate[1]~reg0 ; nextstate[1]$latch ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 0.633      ; 1.078      ;
+; 0.452 ; currentstate[1]~reg0 ; nextstate[0]$latch ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 0.716      ; 1.198      ;
+; 0.520 ; coin1                ; nextstate[1]$latch ; coin1                ; currentstate[0]~reg0 ; 0.000        ; 1.583      ; 2.133      ;
+; 0.529 ; coin1                ; nextstate[0]$latch ; coin1                ; currentstate[0]~reg0 ; 0.000        ; 1.666      ; 2.225      ;
+; 0.541 ; coin1                ; change[0]$latch    ; coin1                ; currentstate[0]~reg0 ; 0.000        ; 1.974      ; 2.545      ;
+; 0.591 ; currentstate[0]~reg0 ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; -0.500       ; 1.583      ; 1.799      ;
+; 0.602 ; currentstate[2]~reg0 ; change[0]$latch    ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 1.024      ; 1.656      ;
+; 0.638 ; currentstate[1]~reg0 ; nextstate[2]$latch ; clk                  ; currentstate[0]~reg0 ; 0.000        ; 0.633      ; 1.301      ;
+; 0.639 ; coin1                ; nextstate[2]$latch ; coin1                ; currentstate[0]~reg0 ; 0.000        ; 1.583      ; 2.252      ;
+; 0.694 ; currentstate[0]~reg0 ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; -0.500       ; 1.583      ; 1.902      ;
+; 0.739 ; currentstate[0]~reg0 ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; -0.500       ; 1.666      ; 2.030      ;
+; 1.376 ; money[2]$latch       ; change[2]$latch    ; coin1                ; currentstate[0]~reg0 ; -0.500       ; -0.317     ; 0.589      ;
+; 1.419 ; coin1                ; nextstate[1]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; 1.583      ; 2.532      ;
+; 1.428 ; coin1                ; nextstate[0]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; 1.666      ; 2.624      ;
+; 1.442 ; money[1]$latch       ; change[1]$latch    ; coin1                ; currentstate[0]~reg0 ; -0.500       ; -0.232     ; 0.740      ;
+; 1.442 ; money[1]$latch       ; change[2]$latch    ; coin1                ; currentstate[0]~reg0 ; -0.500       ; -0.231     ; 0.741      ;
+; 1.447 ; coin1                ; change[0]$latch    ; coin1                ; currentstate[0]~reg0 ; -0.500       ; 1.974      ; 2.951      ;
+; 1.545 ; coin1                ; nextstate[2]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; 1.583      ; 2.658      ;
+; 2.051 ; nextstate[1]$latch   ; change[0]$latch    ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.454      ; 2.505      ;
+; 2.077 ; nextstate[0]$latch   ; change[0]$latch    ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.374      ; 2.451      ;
+; 2.088 ; nextstate[2]$latch   ; change[0]$latch    ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.454      ; 2.542      ;
+; 2.095 ; nextstate[1]$latch   ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.025      ; 2.120      ;
+; 2.104 ; nextstate[1]$latch   ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.108      ; 2.212      ;
+; 2.109 ; nextstate[0]$latch   ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; -0.055     ; 2.054      ;
+; 2.111 ; money[2]$latch       ; nextstate[2]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; -0.708     ; 0.933      ;
+; 2.118 ; nextstate[0]$latch   ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.028      ; 2.146      ;
+; 2.122 ; nextstate[2]$latch   ; nextstate[1]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.025      ; 2.147      ;
+; 2.131 ; nextstate[2]$latch   ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.108      ; 2.239      ;
+; 2.187 ; nextstate[1]$latch   ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.025      ; 2.212      ;
+; 2.213 ; nextstate[0]$latch   ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; -0.055     ; 2.158      ;
+; 2.224 ; nextstate[2]$latch   ; nextstate[2]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 0.000        ; 0.025      ; 2.249      ;
+; 2.312 ; money[1]$latch       ; nextstate[0]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; -0.539     ; 1.303      ;
+; 2.363 ; money[2]$latch       ; nextstate[0]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; -0.625     ; 1.268      ;
+; 2.441 ; money[1]$latch       ; nextstate[1]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; -0.622     ; 1.349      ;
+; 2.482 ; money[1]$latch       ; nextstate[2]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; -0.622     ; 1.390      ;
+; 2.495 ; money[2]$latch       ; nextstate[1]$latch ; coin1                ; currentstate[0]~reg0 ; -0.500       ; -0.708     ; 1.317      ;
++-------+----------------------+--------------------+----------------------+----------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'coin1'                                                                                        ;
++-------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node        ; Launch Clock         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+; 0.356 ; coin1              ; money[2]$latch ; coin1                ; coin1       ; -0.500       ; 2.361      ; 2.237      ;
+; 0.365 ; coin1              ; money[2]$latch ; coin1                ; coin1       ; 0.000        ; 2.361      ; 2.726      ;
+; 0.422 ; coin1              ; money[1]$latch ; coin1                ; coin1       ; -0.500       ; 2.270      ; 2.212      ;
+; 0.473 ; coin1              ; money[1]$latch ; coin1                ; coin1       ; 0.000        ; 2.270      ; 2.743      ;
+; 0.802 ; money[2]$latch     ; money[2]$latch ; coin1                ; coin1       ; 0.000        ; 0.029      ; 0.831      ;
+; 0.954 ; money[1]$latch     ; money[1]$latch ; coin1                ; coin1       ; 0.000        ; 0.024      ; 0.978      ;
+; 1.180 ; money[1]$latch     ; money[2]$latch ; coin1                ; coin1       ; 0.000        ; 0.115      ; 1.295      ;
+; 1.984 ; nextstate[1]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.841      ; 2.355      ;
+; 2.010 ; nextstate[0]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.761      ; 2.301      ;
+; 2.017 ; nextstate[1]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.750      ; 2.297      ;
+; 2.021 ; nextstate[2]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.841      ; 2.392      ;
+; 2.043 ; nextstate[0]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.670      ; 2.243      ;
+; 2.054 ; nextstate[2]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.750      ; 2.334      ;
++-------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                                ;
++-------+--------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node              ; Launch Clock         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+; 0.524 ; nextstate[0]$latch ; currentstate[0]~reg0 ; currentstate[0]~reg0 ; clk         ; 0.000        ; -0.607     ; 0.031      ;
+; 0.686 ; nextstate[1]$latch ; currentstate[1]~reg0 ; currentstate[0]~reg0 ; clk         ; 0.000        ; -0.527     ; 0.273      ;
+; 0.699 ; nextstate[2]$latch ; currentstate[2]~reg0 ; currentstate[0]~reg0 ; clk         ; 0.000        ; -0.527     ; 0.286      ;
++-------+--------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Recovery: 'coin1'                                                                                     ;
++--------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node        ; Launch Clock         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+; -0.288 ; nextstate[2]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.622      ; 0.854      ;
+; -0.265 ; nextstate[0]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.539      ; 0.748      ;
+; -0.238 ; nextstate[2]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.708      ; 0.854      ;
+; -0.238 ; nextstate[1]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.622      ; 0.804      ;
+; -0.215 ; nextstate[0]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.625      ; 0.748      ;
+; -0.188 ; nextstate[1]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; 0.500        ; 0.708      ; 0.804      ;
++--------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Removal: 'coin1'                                                                                     ;
++-------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node        ; Launch Clock         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+; 0.353 ; nextstate[1]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.841      ; 0.724      ;
+; 0.373 ; nextstate[0]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.761      ; 0.664      ;
+; 0.386 ; nextstate[2]$latch ; money[2]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.841      ; 0.757      ;
+; 0.444 ; nextstate[1]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.750      ; 0.724      ;
+; 0.464 ; nextstate[0]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.670      ; 0.664      ;
+; 0.477 ; nextstate[2]$latch ; money[1]$latch ; currentstate[0]~reg0 ; coin1       ; -0.500       ; 0.750      ; 0.757      ;
++-------+--------------------+----------------+----------------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                ;
++-----------------------+---------+-------+----------+---------+---------------------+
+; Clock                 ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++-----------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack      ; -6.624  ; 0.043 ; -2.165   ; 0.353   ; -3.000              ;
+;  clk                  ; -0.837  ; 0.524 ; N/A      ; N/A     ; -3.000              ;
+;  coin1                ; -6.624  ; 0.356 ; -2.165   ; 0.353   ; -3.000              ;
+;  currentstate[0]~reg0 ; -5.908  ; 0.043 ; N/A      ; N/A     ; 0.127               ;
+; Design-wide TNS       ; -44.808 ; 0.0   ; -4.223   ; 0.0     ; -10.461             ;
+;  clk                  ; -2.017  ; 0.000 ; N/A      ; N/A     ; -7.461              ;
+;  coin1                ; -13.243 ; 0.000 ; -4.223   ; 0.000   ; -3.000              ;
+;  currentstate[0]~reg0 ; -29.548 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++-----------------------+---------+-------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                      ;
++-----------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin             ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++-----------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; change[0]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; change[1]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; change[2]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; out             ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; currentstate[0] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; currentstate[1] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; currentstate[2] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; nextstate[0]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; nextstate[1]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; nextstate[2]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; money[0]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; money[1]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; money[2]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++-----------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; drink[0]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; drink[1]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; rst                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; coin1                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; coin5                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; coin2                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin             ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; change[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.33 V              ; -0.00421 V          ; 0.165 V                              ; 0.078 V                              ; 3.11e-09 s                  ; 2.85e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.33 V             ; -0.00421 V         ; 0.165 V                             ; 0.078 V                             ; 3.11e-09 s                 ; 2.85e-09 s                 ; Yes                       ; Yes                       ;
+; change[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; change[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; out             ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; currentstate[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.38 V              ; -0.0073 V           ; 0.097 V                              ; 0.018 V                              ; 4.24e-10 s                  ; 3.65e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.38 V             ; -0.0073 V          ; 0.097 V                             ; 0.018 V                             ; 4.24e-10 s                 ; 3.65e-10 s                 ; No                        ; Yes                       ;
+; currentstate[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; currentstate[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; nextstate[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; nextstate[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.38 V              ; -0.0073 V           ; 0.097 V                              ; 0.018 V                              ; 4.24e-10 s                  ; 3.65e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.38 V             ; -0.0073 V          ; 0.097 V                             ; 0.018 V                             ; 4.24e-10 s                 ; 3.65e-10 s                 ; No                        ; Yes                       ;
+; nextstate[2]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; money[0]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; money[1]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; money[2]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.38 V              ; -0.0073 V           ; 0.097 V                              ; 0.018 V                              ; 4.24e-10 s                  ; 3.65e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.38 V             ; -0.0073 V          ; 0.097 V                             ; 0.018 V                             ; 4.24e-10 s                 ; 3.65e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.37 V              ; -0.0346 V           ; 0.198 V                              ; 0.094 V                              ; 3.14e-10 s                  ; 2.92e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.37 V             ; -0.0346 V          ; 0.198 V                             ; 0.094 V                             ; 3.14e-10 s                 ; 2.92e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.57e-09 V                   ; 2.37 V              ; -0.00683 V          ; 0.171 V                              ; 0.018 V                              ; 4.97e-10 s                  ; 6.66e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.57e-09 V                  ; 2.37 V             ; -0.00683 V         ; 0.171 V                             ; 0.018 V                             ; 4.97e-10 s                 ; 6.66e-10 s                 ; Yes                       ; Yes                       ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin             ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; change[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.33 V              ; -0.0022 V           ; 0.088 V                              ; 0.056 V                              ; 3.76e-09 s                  ; 3.48e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.33 V             ; -0.0022 V          ; 0.088 V                             ; 0.056 V                             ; 3.76e-09 s                 ; 3.48e-09 s                 ; Yes                       ; Yes                       ;
+; change[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; change[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; out             ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; currentstate[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.35 V              ; -0.00834 V          ; 0.127 V                              ; 0.035 V                              ; 4.7e-10 s                   ; 4.64e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.35 V             ; -0.00834 V         ; 0.127 V                             ; 0.035 V                             ; 4.7e-10 s                  ; 4.64e-10 s                 ; Yes                       ; Yes                       ;
+; currentstate[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; currentstate[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; nextstate[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; nextstate[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.35 V              ; -0.00834 V          ; 0.127 V                              ; 0.035 V                              ; 4.7e-10 s                   ; 4.64e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.35 V             ; -0.00834 V         ; 0.127 V                             ; 0.035 V                             ; 4.7e-10 s                  ; 4.64e-10 s                 ; Yes                       ; Yes                       ;
+; nextstate[2]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; money[0]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; money[1]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; money[2]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.35 V              ; -0.00834 V          ; 0.127 V                              ; 0.035 V                              ; 4.7e-10 s                   ; 4.64e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.35 V             ; -0.00834 V         ; 0.127 V                             ; 0.035 V                             ; 4.7e-10 s                  ; 4.64e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.55e-07 V                   ; 2.35 V              ; -0.00221 V          ; 0.097 V                              ; 0.005 V                              ; 4.49e-10 s                  ; 3.85e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.55e-07 V                  ; 2.35 V             ; -0.00221 V         ; 0.097 V                             ; 0.005 V                             ; 4.49e-10 s                 ; 3.85e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.54e-07 V                   ; 2.34 V              ; -0.00774 V          ; 0.109 V                              ; 0.026 V                              ; 6.58e-10 s                  ; 8.24e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.54e-07 V                  ; 2.34 V             ; -0.00774 V         ; 0.109 V                             ; 0.026 V                             ; 6.58e-10 s                 ; 8.24e-10 s                 ; Yes                       ; Yes                       ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin             ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; change[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.64 V              ; -0.0117 V           ; 0.202 V                              ; 0.176 V                              ; 2.38e-09 s                  ; 2.22e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.64 V             ; -0.0117 V          ; 0.202 V                             ; 0.176 V                             ; 2.38e-09 s                 ; 2.22e-09 s                 ; No                        ; Yes                       ;
+; change[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; change[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; out             ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; currentstate[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.73 V              ; -0.0384 V           ; 0.169 V                              ; 0.089 V                              ; 2.7e-10 s                   ; 2.62e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.73 V             ; -0.0384 V          ; 0.169 V                             ; 0.089 V                             ; 2.7e-10 s                  ; 2.62e-10 s                 ; Yes                       ; Yes                       ;
+; currentstate[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; currentstate[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; nextstate[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; nextstate[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.73 V              ; -0.0384 V           ; 0.169 V                              ; 0.089 V                              ; 2.7e-10 s                   ; 2.62e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.73 V             ; -0.0384 V          ; 0.169 V                             ; 0.089 V                             ; 2.7e-10 s                  ; 2.62e-10 s                 ; Yes                       ; Yes                       ;
+; nextstate[2]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; money[0]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; money[1]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; money[2]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.73 V              ; -0.0384 V           ; 0.169 V                              ; 0.089 V                              ; 2.7e-10 s                   ; 2.62e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.73 V             ; -0.0384 V          ; 0.169 V                             ; 0.089 V                             ; 2.7e-10 s                  ; 2.62e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Setup Transfers                                                                         ;
++----------------------+----------------------+----------+----------+----------+----------+
+; From Clock           ; To Clock             ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------+----------------------+----------+----------+----------+----------+
+; currentstate[0]~reg0 ; clk                  ; 3        ; 0        ; 0        ; 0        ;
+; coin1                ; coin1                ; 0        ; 0        ; 7        ; 11       ;
+; currentstate[0]~reg0 ; coin1                ; 0        ; 0        ; 12       ; 0        ;
+; clk                  ; currentstate[0]~reg0 ; 12       ; 0        ; 0        ; 0        ;
+; coin1                ; currentstate[0]~reg0 ; 5        ; 19       ; 0        ; 0        ;
+; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 21       ; 6        ; 0        ; 0        ;
++----------------------+----------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------+
+; Hold Transfers                                                                          ;
++----------------------+----------------------+----------+----------+----------+----------+
+; From Clock           ; To Clock             ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------+----------------------+----------+----------+----------+----------+
+; currentstate[0]~reg0 ; clk                  ; 3        ; 0        ; 0        ; 0        ;
+; coin1                ; coin1                ; 0        ; 0        ; 7        ; 11       ;
+; currentstate[0]~reg0 ; coin1                ; 0        ; 0        ; 12       ; 0        ;
+; clk                  ; currentstate[0]~reg0 ; 12       ; 0        ; 0        ; 0        ;
+; coin1                ; currentstate[0]~reg0 ; 5        ; 19       ; 0        ; 0        ;
+; currentstate[0]~reg0 ; currentstate[0]~reg0 ; 21       ; 6        ; 0        ; 0        ;
++----------------------+----------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------+
+; Recovery Transfers                                                          ;
++----------------------+----------+----------+----------+----------+----------+
+; From Clock           ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------+----------+----------+----------+----------+----------+
+; currentstate[0]~reg0 ; coin1    ; 0        ; 0        ; 6        ; 0        ;
++----------------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------+
+; Removal Transfers                                                           ;
++----------------------+----------+----------+----------+----------+----------+
+; From Clock           ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------+----------+----------+----------+----------+----------+
+; currentstate[0]~reg0 ; coin1    ; 0        ; 0        ; 6        ; 0        ;
++----------------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 6     ; 6    ;
+; Unconstrained Input Port Paths  ; 15    ; 15   ;
+; Unconstrained Output Ports      ; 13    ; 13   ;
+; Unconstrained Output Port Paths ; 17    ; 17   ;
++---------------------------------+-------+------+
+
+
++------------------------------------------------------------------+
+; Clock Status Summary                                             ;
++----------------------+----------------------+------+-------------+
+; Target               ; Clock                ; Type ; Status      ;
++----------------------+----------------------+------+-------------+
+; clk                  ; clk                  ; Base ; Constrained ;
+; coin1                ; coin1                ; Base ; Constrained ;
+; currentstate[0]~reg0 ; currentstate[0]~reg0 ; Base ; Constrained ;
++----------------------+----------------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; coin1      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; coin2      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; coin5      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; drink[0]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; drink[1]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                              ;
++-----------------+---------------------------------------------------------------------------------------+
+; Output Port     ; Comment                                                                               ;
++-----------------+---------------------------------------------------------------------------------------+
+; change[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; change[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; change[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; currentstate[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; currentstate[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; currentstate[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; money[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; money[1]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; money[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nextstate[0]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nextstate[1]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nextstate[2]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; out             ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-----------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; coin1      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; coin2      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; coin5      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; drink[0]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; drink[1]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                              ;
++-----------------+---------------------------------------------------------------------------------------+
+; Output Port     ; Comment                                                                               ;
++-----------------+---------------------------------------------------------------------------------------+
+; change[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; change[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; change[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; currentstate[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; currentstate[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; currentstate[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; money[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; money[1]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; money[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nextstate[0]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nextstate[1]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nextstate[2]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; out             ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-----------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Sat Oct 02 18:51:06 2021
+Info: Command: quartus_sta fanmaiji -c fanmaiji
+Info: qsta_default_script.tcl version: #3
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 9 combinational loops as latches. For more details, run the Check Timing command in the TimeQuest Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'fanmaiji.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+    Info (332105): create_clock -period 1.000 -name currentstate[0]~reg0 currentstate[0]~reg0
+    Info (332105): create_clock -period 1.000 -name coin1 coin1
+Warning (332125): Found combinational loop of 2 nodes File: C:/intelFPGA_lite/17.1/project/fanmaiji/fanmaiji.v Line: 18
+    Warning (332126): Node "money[0]$latch~0|combout"
+    Warning (332126): Node "money[0]$latch~0|datab"
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: money[2]~2  from: datad  to: combout
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -6.624
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -6.624             -13.243 coin1 
+    Info (332119):    -5.908             -29.548 currentstate[0]~reg0 
+    Info (332119):    -0.837              -2.017 clk 
+Info (332146): Worst-case hold slack is 0.417
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.417               0.000 currentstate[0]~reg0 
+    Info (332119):     0.841               0.000 clk 
+    Info (332119):     0.916               0.000 coin1 
+Info (332146): Worst-case recovery slack is -2.165
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.165              -4.223 coin1 
+Info (332146): Worst-case removal slack is 1.094
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.094               0.000 coin1 
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000              -7.461 clk 
+    Info (332119):    -3.000              -3.000 coin1 
+    Info (332119):     0.238               0.000 currentstate[0]~reg0 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: money[2]~2  from: datad  to: combout
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -6.376
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -6.376             -12.746 coin1 
+    Info (332119):    -5.577             -27.754 currentstate[0]~reg0 
+    Info (332119):    -0.527              -1.121 clk 
+Info (332146): Worst-case hold slack is 0.468
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.468               0.000 currentstate[0]~reg0 
+    Info (332119):     0.606               0.000 clk 
+    Info (332119):     0.786               0.000 coin1 
+Info (332146): Worst-case recovery slack is -1.993
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.993              -3.882 coin1 
+Info (332146): Worst-case removal slack is 1.067
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.067               0.000 coin1 
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000              -7.461 clk 
+    Info (332119):    -3.000              -3.000 coin1 
+    Info (332119):     0.127               0.000 currentstate[0]~reg0 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: money[2]~2  from: datad  to: combout
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.362
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.362             -11.244 currentstate[0]~reg0 
+    Info (332119):    -2.181              -4.354 coin1 
+    Info (332119):     0.025               0.000 clk 
+Info (332146): Worst-case hold slack is 0.043
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.043               0.000 currentstate[0]~reg0 
+    Info (332119):     0.356               0.000 coin1 
+    Info (332119):     0.524               0.000 clk 
+Info (332146): Worst-case recovery slack is -0.288
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.288              -0.526 coin1 
+Info (332146): Worst-case removal slack is 0.353
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.353               0.000 coin1 
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000              -6.303 clk 
+    Info (332119):    -3.000              -3.000 coin1 
+    Info (332119):     0.433               0.000 currentstate[0]~reg0 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4774 megabytes
+    Info: Processing ended: Sat Oct 02 18:51:09 2021
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+

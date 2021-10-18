@@ -1,0 +1,90 @@
+module fanmaiji (drink,clk,rst,coin,change,out,currentstate,nextstate,money);
+input [2:0]count;
+input [1:0]drink;
+input rst,clk;
+input [2:0]coin;
+output  reg [2:0] change;
+output reg out;
+output reg [2:0] currentstate,nextstate;
+reg [2:0] value;
+output reg [2:0] money;
+parameter s0=3'b000;
+parameter s1=3'b001;
+parameter s2=3'b010;
+parameter s3=3'b011;
+
+always @(count) begin
+    if(nextstate == s2)
+    value <= 3'd0;
+    else
+    value <= coin;
+end
+
+
+always @ (posedge clk or negedge rst)begin
+if(rst==1'b0)
+currentstate<=s0;
+else
+currentstate<=nextstate;
+end
+
+always @  (currentstate or coin or drink  )
+case (currentstate)
+s0:
+begin
+change <= 3'd0;
+money <= 3'd0;
+out <= 1'b0;
+if (drink !=2'b00 )
+nextstate <= s1;
+else
+nextstate <= s0;
+end
+s1:
+begin
+    money <= money + value;
+    nextstate <= s2;
+end
+s2:
+begin
+case(drink)
+    2'b01:begin
+        if(money>=3'd2)
+        nextstate <= s3;
+        else
+        nextstate <= s1;
+    end
+    2'b10:begin
+        if(money>=3'd3)
+        nextstate <= s3;
+        else
+        nextstate <= s1;
+    end
+    2'b11:begin
+        if(money>=3'd5)
+        nextstate <= s3;
+        else
+        nextstate <= s1;
+    end
+endcase
+end
+
+s3:begin
+    out <= 1'b1;
+ case(drink)
+   2'b01:begin
+       change <= money - 3'd2;
+       nextstate <= s0;
+   end
+   2'b10:begin
+       change <= money - 3'd3;
+       nextstate <= s0;
+   end
+   2'b11:begin
+       change <= money - 3'd5;
+       nextstate <= s0;
+   end
+ endcase
+end
+endcase
+endmodule

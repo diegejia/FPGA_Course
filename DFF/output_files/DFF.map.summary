@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Oct 13 14:27:25 2021
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : DFF
+Top-level Entity Name : DFF_32
+Family : Cyclone IV E
+Total logic elements : 1
+    Total combinational functions : 0
+    Dedicated logic registers : 1
+Total registers : 1
+Total pins : 4
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
